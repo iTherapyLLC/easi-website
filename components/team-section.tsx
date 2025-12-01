@@ -1,7 +1,7 @@
 "use client"
 
 import { AnimatedWrapper } from "./animated-wrapper"
-import { Award, BookOpen, Brain, Sparkles } from "lucide-react"
+import { Award, BookOpen, Brain, MessageCircle } from "lucide-react"
 import Image from "next/image"
 
 const team = [
@@ -13,7 +13,7 @@ const team = [
     credentials: [
       { icon: Award, text: "Principal Investigator on 4 NSF SBIR Projects" },
       { icon: BookOpen, text: "Lead Editor & Publisher, Autism Digest" },
-      { icon: Sparkles, text: "Published Author" },
+      { icon: MessageCircle, text: "Published Author" },
       { icon: Brain, text: "30+ years across schools, hospitals, private practice" },
     ],
   },
@@ -25,7 +25,7 @@ const team = [
     credentials: [
       { icon: Award, text: "CTO, NSF SBIR Phase 2 (Grant #2133148)" },
       { icon: Brain, text: "NIH Co-Principal Investigator" },
-      { icon: Sparkles, text: "2013 Mensa Award for autism technology innovation" },
+      { icon: MessageCircle, text: "2013 Mensa Award for autism technology innovation" },
       { icon: BookOpen, text: "Published in The ASHA Leader on AI applications" },
     ],
   },
@@ -82,7 +82,7 @@ export function TeamSection() {
         {/* Why This Matters callout */}
         <AnimatedWrapper delay={500} className="mt-12 text-center">
           <div className="inline-flex items-center gap-3 px-6 py-3 bg-white rounded-full border border-[#E5E7EB] shadow-sm">
-            <Sparkles className="w-5 h-5 text-[#8B5CF6]" />
+            <MessageCircle className="w-5 h-5 text-[#8B5CF6]" />
             <span className="text-[#6B7280]">
               <strong className="text-[#1F2937]">Why This Matters:</strong> We're practicing SLPs who built what we
               desperately needed.
