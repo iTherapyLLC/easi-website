@@ -16,10 +16,10 @@ const footerLinks = {
     { label: "Contact", href: "mailto:admin@itherapyllc.com" },
   ],
   Legal: [
-    { label: "Privacy Policy", href: "#" },
-    { label: "Terms of Service", href: "#" },
-    { label: "HIPAA Compliance", href: "#" },
-    { label: "BAA", href: "#" },
+    { label: "Privacy & Security Policy", href: "/privacy" },
+    { label: "HIPAA Compliance", href: "/privacy#section-1" },
+    { label: "FERPA Compliance", href: "/privacy#section-3" },
+    { label: "NDPA Documentation", href: "/privacy#ndpa" },
   ],
 }
 
@@ -37,8 +37,8 @@ export function Footer() {
               <span className="text-xl font-semibold">EASI</span>
             </Link>
             <p className="text-sm text-white/60 leading-relaxed mb-4">
-              Evaluative Artificial Speech Intelligence. Transforming speech-language assessment through AI that
-              preserves clinical judgment.
+              Evaluative Artificial Speech Intelligence. Transforming speech-language assessment through computational
+              linguistics that preserves clinical judgment.
             </p>
             <p className="text-sm text-white/60 mb-6">Distributed exclusively through Northern Speech Services</p>
 
@@ -93,6 +93,10 @@ export function Footer() {
             <span className="flex items-center gap-2">
               <Shield className="w-4 h-4 text-[#14B8A6]" />
               HIPAA & FERPA Compliant
+            </span>
+            <span className="flex items-center gap-2">
+              <Shield className="w-4 h-4 text-[#14B8A6]" />
+              NIST CSF Aligned
             </span>
           </div>
         </div>

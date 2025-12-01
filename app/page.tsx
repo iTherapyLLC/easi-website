@@ -5,6 +5,7 @@ import { ValueProposition } from "@/components/value-proposition"
 import { HowItWorks } from "@/components/how-it-works"
 import { ChatSLP } from "@/components/chat-slp"
 import { Comparison } from "@/components/comparison"
+import { SecuritySection } from "@/components/security-section"
 import { TeamSection } from "@/components/team-section"
 import { FAQSection } from "@/components/faq-section"
 import { NSSSection } from "@/components/nss-section"
@@ -22,6 +23,7 @@ export default function Home() {
       <HowItWorks />
       <ChatSLP />
       <Comparison />
+      <SecuritySection />
       <TeamSection />
       <FAQSection />
       <NSSSection />
