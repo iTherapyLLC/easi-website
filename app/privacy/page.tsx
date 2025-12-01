@@ -15,9 +15,20 @@ import {
 import { Button } from "@/components/ui/button"
 
 export const metadata: Metadata = {
-  title: "Privacy & Security Policies | EASI",
+  title: "Privacy & Security Policies | EASI - HIPAA & FERPA Compliant",
   description:
-    "Comprehensive information security and privacy policies for EASI - Evaluative Artificial Speech Intelligence. HIPAA, FERPA, NIST CSF compliant.",
+    "Comprehensive information security and privacy policies for EASI. HIPAA compliant with BAA. FERPA compliant. NIST CSF 2.0 aligned. Built by SLPs for speech-language pathologists. NSF SBIR Phase II funded.",
+  alternates: {
+    canonical: "/privacy",
+  },
+  openGraph: {
+    title: "Privacy & Security Policies | EASI",
+    description:
+      "HIPAA and FERPA compliant security framework. NIST CSF 2.0 aligned. Protecting student data and PHI with healthcare-grade infrastructure.",
+    url: "https://easi-as.com/privacy",
+    siteName: "EASI",
+    type: "website",
+  },
 }
 
 export default function PrivacyPage() {
@@ -503,56 +514,65 @@ export default function PrivacyPage() {
               <Shield className="w-5 h-5 text-teal-600" />
             </div>
             <h2 className="text-2xl font-semibold text-[#3F4B5B]">
-              20. Alignment with NIST Cybersecurity Framework v1.1
+              20. Alignment with NIST Cybersecurity Framework 2.0
             </h2>
           </div>
 
           <div className="prose prose-gray max-w-none">
             <p className="text-gray-600">
-              iTherapy's security program is designed to align with all five core functions of the NIST CSF: Identify,
-              Protect, Detect, Respond, and Recover.
+              iTherapy's security program is designed to align with all six core functions of the NIST CSF 2.0 (February
+              2024): Govern, Identify, Protect, Detect, Respond, and Recover.
             </p>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 mt-6">
               {[
                 {
-                  title: "IDENTIFY (ID)",
-                  color: "bg-blue-50 border-blue-200",
+                  title: "GOVERN (GV)",
+                  color: "bg-purple-50 border-purple-200",
                   items: [
-                    "Asset Management",
-                    "Business Environment",
-                    "Governance",
-                    "Risk Assessment",
+                    "Organizational Context",
                     "Risk Management Strategy",
+                    "Roles & Responsibilities",
+                    "Policy & Procedures",
+                    "Oversight & Accountability",
                     "Supply Chain Risk Management",
                   ],
+                },
+                {
+                  title: "IDENTIFY (ID)",
+                  color: "bg-blue-50 border-blue-200",
+                  items: ["Asset Management", "Business Environment", "Risk Assessment", "Improvement"],
                 },
                 {
                   title: "PROTECT (PR)",
                   color: "bg-green-50 border-green-200",
                   items: [
-                    "Access Control",
+                    "Identity Management & Access Control",
                     "Awareness and Training",
                     "Data Security",
-                    "Information Protection",
-                    "Maintenance",
-                    "Protective Technology",
+                    "Platform Security",
+                    "Technology Infrastructure Resilience",
                   ],
                 },
                 {
                   title: "DETECT (DE)",
                   color: "bg-yellow-50 border-yellow-200",
-                  items: ["Anomalies and Events", "Security Continuous Monitoring", "Detection Processes"],
+                  items: ["Continuous Monitoring", "Adverse Event Analysis"],
                 },
                 {
                   title: "RESPOND (RS)",
                   color: "bg-orange-50 border-orange-200",
-                  items: ["Response Planning", "Communications", "Analysis", "Mitigation", "Improvements"],
+                  items: [
+                    "Incident Management",
+                    "Incident Analysis",
+                    "Incident Response Reporting",
+                    "Incident Mitigation",
+                  ],
                 },
                 {
                   title: "RECOVER (RC)",
                   color: "bg-red-50 border-red-200",
-                  items: ["Recovery Planning", "Improvements", "Communications"],
+                  items: ["Incident Recovery Plan Execution", "Incident Recovery Communication"],
                 },
               ].map((section, i) => (
                 <div key={i} className={`${section.color} border rounded-lg p-4`}>

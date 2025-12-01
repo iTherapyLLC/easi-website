@@ -16,6 +16,10 @@ export const metadata: Metadata = {
   keywords:
     "speech language assessment software, SLP evaluation tool, language sample analysis, HIPAA compliant speech therapy, MLU calculator, ChatSLP, speech pathology, EASI, clinical assessment",
   authors: [{ name: "iTherapy, LLC" }],
+  metadataBase: new URL("https://easi-as.com"),
+  alternates: {
+    canonical: "/",
+  },
   icons: {
     icon: "/easi-logo.png",
     shortcut: "/easi-logo.png",
@@ -28,11 +32,20 @@ export const metadata: Metadata = {
     url: "https://easi-as.com",
     siteName: "EASI",
     type: "website",
+    images: [
+      {
+        url: "/easi-logo.png",
+        width: 512,
+        height: 512,
+        alt: "EASI - Evaluative Artificial Speech Intelligence",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "EASI: Speech & Language Assessment in 15 Minutes",
     description: "HIPAA compliant. Built by SLPs. NSF funded. Transform your evaluation workflow.",
+    images: ["/easi-logo.png"],
   },
   robots: {
     index: true,
