@@ -222,7 +222,7 @@ export function HeroSection() {
               $<AnimatedCounter end={199} />
             </div>
             <div className="text-sm text-white/70 mt-1">Per Year</div>
-            <div className="text-xs text-white/50">10 Evaluations Included</div>
+            <div className="text-xs text-white/50">ChatSLP + 10 Evaluations</div>
           </div>
           <div className="text-center">
             <div className="text-3xl md:text-4xl font-bold text-white">

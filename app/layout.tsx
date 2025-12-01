@@ -17,6 +17,11 @@ export const metadata: Metadata = {
   keywords:
     "speech language assessment software, SLP evaluation tool, language sample analysis, HIPAA compliant speech therapy, MLU calculator, ChatSLP, speech pathology, EASI, clinical assessment",
   authors: [{ name: "iTherapy, LLC" }],
+  icons: {
+    icon: "/easi-logo.png",
+    shortcut: "/easi-logo.png",
+    apple: "/easi-logo.png",
+  },
   openGraph: {
     title: "EASI: Speech & Language Assessment in 15 Minutes, Not 5 Hours",
     description:
