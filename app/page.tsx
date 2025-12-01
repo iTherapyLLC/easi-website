@@ -7,6 +7,7 @@ import { ChatSLP } from "@/components/chat-slp"
 import { Comparison } from "@/components/comparison"
 import { TeamSection } from "@/components/team-section"
 import { FAQSection } from "@/components/faq-section"
+import { NSSSection } from "@/components/nss-section"
 import { CTASection } from "@/components/cta-section"
 import { Footer } from "@/components/footer"
 import { ChatAssistant } from "@/components/chat-assistant"
@@ -23,6 +24,7 @@ export default function Home() {
       <Comparison />
       <TeamSection />
       <FAQSection />
+      <NSSSection />
       <CTASection />
       <Footer />
       <ChatAssistant />

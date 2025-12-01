@@ -1,7 +1,8 @@
 "use client"
 
-import { CheckCircle2, XCircle, Lock, Sparkles } from "lucide-react"
+import { CheckCircle2, XCircle, Lock } from "lucide-react"
 import { AnimatedWrapper } from "./animated-wrapper"
+import Image from "next/image"
 
 const capabilities = [
   "Cross-checks EASI results, flagging areas for human review",
@@ -39,8 +40,8 @@ export function ChatSLP() {
                 {/* Modal Header */}
                 <div className="bg-[#3F4B5B] text-white px-6 py-4 flex items-center justify-between">
                   <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 bg-[#14B8A6] rounded-full flex items-center justify-center">
-                      <Sparkles className="w-5 h-5" />
+                    <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center p-1">
+                      <Image src="/easi-logo.png" alt="EASI Logo" width={32} height={32} className="object-contain" />
                     </div>
                     <div>
                       <div className="font-semibold">ChatSLP</div>
