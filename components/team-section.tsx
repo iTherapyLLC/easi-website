@@ -1,20 +1,23 @@
 "use client"
 
 import { AnimatedWrapper } from "./animated-wrapper"
-import { Award, BookOpen, Brain, MessageCircle } from "lucide-react"
+import { Award, BookOpen, Brain, MessageCircle, Microscope, Users, GraduationCap } from "lucide-react"
 import Image from "next/image"
 
 const team = [
   {
     name: "Lois Jean Brady, MA, SLP",
-    role: "Co-Founder & CEO",
+    role: "Co-Founder & CEO, Principal Investigator",
     image: "/images/jeani-20headshot.avif",
     gradient: "from-[#8B5CF6] to-[#A78BFA]",
+    bio: "30+ years advancing communication access through clinical excellence and technological innovation. Leading research that bridges speech-language pathology with assistive technology development.",
     credentials: [
-      { icon: Award, text: "Principal Investigator on 4 NSF SBIR Projects" },
-      { icon: BookOpen, text: "Lead Editor & Publisher, Autism Digest" },
-      { icon: MessageCircle, text: "Published Author" },
-      { icon: Brain, text: "30+ years across schools, hospitals, private practice" },
+      { icon: Award, text: "Principal Investigator: NSF Phase I & II, NIH R43, AFWERX Phase I" },
+      { icon: BookOpen, text: "Author: Apps for Autism, Speak Move Play and Learn, Speech in Action" },
+      { icon: Users, text: "Board of Directors, US Society for Augmentative & Alternative Communication" },
+      { icon: Brain, text: "Certified Autism Specialist with expertise in AAC systems & IEP development" },
+      { icon: Microscope, text: "Microsoft AI for Accessibility & Epic Unreal MegaGrant recipient" },
+      { icon: GraduationCap, text: "M.A. Speech-Language Pathology, CSU Northridge" },
     ],
   },
   {
@@ -22,11 +25,14 @@ const team = [
     role: "Co-Founder & Chief Technology Officer",
     image: "/images/mensa-20headshot.jpeg",
     gradient: "from-[#14B8A6] to-[#5EEAD4]",
+    bio: "Speech-language pathologist bridging clinical practice with technology innovation. Expertise in computational linguistics, speech processing, and multi-sensory intervention design.",
     credentials: [
-      { icon: Award, text: "CTO, NSF SBIR Phase 2 (Grant #2133148)" },
-      { icon: Brain, text: "NIH Co-Principal Investigator" },
-      { icon: MessageCircle, text: "2013 Mensa Award for autism technology innovation" },
-      { icon: BookOpen, text: "Published in The ASHA Leader on AI applications" },
+      { icon: Award, text: "CTO, NSF SBIR Phase 2 (Grant #2133148) developing EASI platform" },
+      { icon: Microscope, text: "Co-PI on NIH & NSF grants for speech technology research" },
+      { icon: Brain, text: "2013 Mensa Intellectual Benefits to Society Award for autism technology" },
+      { icon: Users, text: "Board Member: American Society for AI, Mensa Foundation Trustee" },
+      { icon: BookOpen, text: "Guest Editor, Mensa Research Journal; National Academies invited speaker" },
+      { icon: GraduationCap, text: "M.S. Speech Pathology & Audiology, CSU East Bay; ASHA CCC" },
     ],
   },
 ]
@@ -47,7 +53,7 @@ export function TeamSection() {
         <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {team.map((member, index) => (
             <AnimatedWrapper key={index} delay={index * 200} animation={index === 0 ? "reveal-left" : "reveal-right"}>
-              <div className="bg-white border border-[#E5E7EB] rounded-2xl p-8 hover:shadow-xl transition-all duration-500 group hover:-translate-y-1">
+              <div className="bg-white border border-[#E5E7EB] rounded-2xl p-8 hover:shadow-xl transition-all duration-500 group hover:-translate-y-1 h-full flex flex-col">
                 <div className="relative mb-6">
                   <div
                     className={`w-24 h-24 rounded-2xl overflow-hidden shadow-lg group-hover:scale-105 transition-transform duration-300 relative`}
@@ -61,9 +67,11 @@ export function TeamSection() {
                 </div>
 
                 <h3 className="text-xl font-bold text-[#1F2937] mb-1">{member.name}</h3>
-                <p className="text-[#8B5CF6] font-medium text-sm mb-6">{member.role}</p>
+                <p className="text-[#8B5CF6] font-medium text-sm mb-3">{member.role}</p>
 
-                <ul className="space-y-3">
+                <p className="text-sm text-[#6B7280] mb-5 leading-relaxed">{member.bio}</p>
+
+                <ul className="space-y-2.5 flex-grow">
                   {member.credentials.map((credential, credIndex) => (
                     <li
                       key={credIndex}
