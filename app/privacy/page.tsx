@@ -65,13 +65,13 @@ export default function PrivacyPage() {
               variant="outline"
               className="border-blue-200 text-blue-700 hover:bg-blue-100 bg-transparent"
             >
-              <a href="mailto:privacy@itherapyllc.com">
+              <a href="mailto:admin@itherapyllc.com">
                 <Mail className="w-4 h-4 mr-2" />
-                privacy@itherapyllc.com
+                admin@itherapyllc.com
               </a>
             </Button>
             <Button asChild variant="outline" className="border-red-200 text-red-700 hover:bg-red-100 bg-transparent">
-              <a href="mailto:security@itherapyllc.com">
+              <a href="mailto:admin@itherapyllc.com?subject=Security Incident Report">
                 <AlertTriangle className="w-4 h-4 mr-2" />
                 Report Security Incident
               </a>
@@ -217,7 +217,7 @@ export default function PrivacyPage() {
               <h4 className="font-medium text-amber-800 mb-2">Reporting Requirements</h4>
               <p className="text-sm text-amber-700">
                 Employees are required to report any suspected security incidents immediately (within 1 hour of
-                discovery) to security@itherapyllc.com or management. Failure to report incidents may result in
+                discovery) to admin@itherapyllc.com or management. Failure to report incidents may result in
                 disciplinary action.
               </p>
             </div>
@@ -672,13 +672,13 @@ export default function PrivacyPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button asChild variant="outline" className="border-white/30 text-white hover:bg-white/10 bg-transparent">
-              <a href="mailto:privacy@itherapyllc.com">
+              <a href="mailto:admin@itherapyllc.com">
                 <Mail className="w-4 h-4 mr-2" />
                 Contact Privacy Officer
               </a>
             </Button>
             <Button asChild className="bg-red-500 hover:bg-red-600 text-white">
-              <a href="mailto:security@itherapyllc.com">
+              <a href="mailto:admin@itherapyllc.com?subject=Security Concern">
                 <AlertTriangle className="w-4 h-4 mr-2" />
                 Report Security Concern
               </a>
