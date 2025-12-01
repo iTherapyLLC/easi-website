@@ -1,0 +1,38 @@
+# EASI - Evaluative Artificial Speech Intelligence
+
+> EASI transforms 5+ hours of speech-language evaluation into 15-30 minutes using computational linguistics and speech processing technology.
+
+## Key Facts
+
+- Transforms 5+ hours of evaluation into 15-30 minutes
+- 98-99% transcription accuracy
+- Automatic speaker diarization (separates adult from child speech)
+- IPA transcription included
+- Calculates MLU, IPSYN, NDW, PCC, VOT, Intelligibility
+- HIPAA and FERPA compliant
+- NSF SBIR Phase II funded (Award #2133148)
+- Built by practicing speech-language pathologists
+- $199/year includes 10 evaluations + unlimited ChatSLP access
+- Distributed exclusively through Northern Speech Services
+
+## ChatSLP
+
+ChatSLP is EASI's clinical reasoning partner—a HIPAA-compliant consultation system that helps SLPs cross-check findings, draft reports, and get evidence-based intervention suggestions. Unlike ChatGPT, ChatSLP is safe for real patient data.
+
+## Why Not ChatGPT?
+
+SLPs cannot use ChatGPT for evaluations: no BAA (HIPAA violation), cannot process audio, cannot separate speakers, cannot calculate clinical metrics, risks professional license. EASI provides all of this with healthcare-grade security.
+
+## Pricing
+
+$199/year includes unlimited ChatSLP + 10 evaluations. Additional credits: 10/$49, 25/$99, 50/$179.
+
+## Purchase
+
+Distributed exclusively through Northern Speech Services: northernspeech.com
+
+## Company
+
+iTherapy, LLC | Vallejo, CA | admin@itherapyllc.com | 707-651-9915
+Founders: Lois Jean Brady, MA, SLP (CEO) & Matthew Guggemos, MS, CCC-SLP (CTO)
+Federal funding: $2.5M+ from NSF, NIH, IES, AFWERX
