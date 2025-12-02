@@ -165,9 +165,12 @@ export function SecuritySection() {
               >
                 <Link href="/privacy">View Full Policy</Link>
               </Button>
-              <Button asChild className="bg-[#3F4B5B] hover:bg-[#2d3744] text-white px-6 py-3 rounded-xl">
-                <a href="mailto:admin@itherapyllc.com?subject=Security Documentation Request">Request Documentation</a>
-              </Button>
+              <a
+                href="mailto:admin@itherapyllc.com?subject=Security Documentation Request"
+                className="inline-flex items-center justify-center bg-[#3F4B5B] hover:bg-[#2d3744] text-white px-6 py-3 rounded-xl text-sm font-medium transition-colors"
+              >
+                Request Documentation
+              </a>
             </div>
           </div>
         </motion.div>
