@@ -143,14 +143,21 @@ export function SecuritySection() {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.6 }}
-          className="bg-white rounded-2xl p-8 md:p-10 shadow-sm border border-gray-100 mb-12"
+          whileHover={{
+            y: -8,
+            scale: 1.02,
+            boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.15), 0 0 30px rgba(59, 130, 246, 0.1)",
+          }}
+          className="bg-white rounded-2xl p-8 md:p-10 shadow-sm border border-gray-100 mb-12 cursor-pointer group transition-colors duration-300 hover:border-blue-200"
         >
           <div className="flex flex-col md:flex-row items-start md:items-center gap-6">
-            <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-[#3F4B5B] to-slate-600 flex items-center justify-center flex-shrink-0">
-              <FileText className="w-8 h-8 text-white" />
+            <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-[#3F4B5B] to-slate-600 flex items-center justify-center flex-shrink-0 transition-all duration-300 group-hover:scale-110 group-hover:rotate-3 group-hover:shadow-lg group-hover:from-blue-600 group-hover:to-indigo-600">
+              <FileText className="w-8 h-8 text-white transition-transform duration-300 group-hover:scale-110" />
             </div>
             <div className="flex-1">
-              <h3 className="text-xl font-semibold text-[#3F4B5B] mb-2">Enterprise & District Procurement</h3>
+              <h3 className="text-xl font-semibold text-[#3F4B5B] mb-2 transition-colors duration-300 group-hover:text-blue-700">
+                Enterprise & District Procurement
+              </h3>
               <p className="text-gray-600 leading-relaxed">
                 Need detailed security documentation for your organization's procurement process? We provide
                 comprehensive security documentation including NIST CSF alignment, NDPA agreements, Data Security and
@@ -161,13 +168,13 @@ export function SecuritySection() {
               <Button
                 asChild
                 variant="outline"
-                className="border-blue-200 text-blue-700 hover:bg-blue-50 bg-transparent"
+                className="border-blue-200 text-blue-700 hover:bg-blue-50 bg-transparent transition-all duration-300 hover:scale-105 hover:shadow-md hover:border-blue-400"
               >
                 <Link href="/privacy">View Full Policy</Link>
               </Button>
               <a
                 href="mailto:admin@itherapyllc.com?subject=Security Documentation Request"
-                className="inline-flex items-center justify-center bg-[#3F4B5B] hover:bg-[#2d3744] text-white px-6 py-3 rounded-xl text-sm font-medium transition-colors"
+                className="inline-flex items-center justify-center bg-[#3F4B5B] hover:bg-blue-600 text-white px-6 py-3 rounded-xl text-sm font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25"
               >
                 Request Documentation
               </a>
@@ -180,15 +187,22 @@ export function SecuritySection() {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.8 }}
-          className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-8 md:p-10 border border-blue-100"
+          whileHover={{
+            y: -8,
+            scale: 1.02,
+            boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.1), 0 0 30px rgba(99, 102, 241, 0.15)",
+          }}
+          className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-8 md:p-10 border border-blue-100 cursor-pointer group transition-all duration-300 hover:border-indigo-300 hover:from-blue-100 hover:to-indigo-100"
         >
           <div className="flex items-start gap-4">
-            <div className="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center flex-shrink-0">
-              <Award className="w-6 h-6 text-blue-600" />
+            <div className="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center flex-shrink-0 transition-all duration-300 group-hover:scale-110 group-hover:bg-gradient-to-br group-hover:from-blue-500 group-hover:to-indigo-500 group-hover:shadow-lg group-hover:shadow-blue-500/25">
+              <Award className="w-6 h-6 text-blue-600 transition-all duration-300 group-hover:text-white group-hover:scale-110" />
             </div>
             <div>
-              <h3 className="text-lg font-semibold text-[#3F4B5B] mb-3">Federally Validated Innovation</h3>
-              <p className="text-gray-700 leading-relaxed">
+              <h3 className="text-lg font-semibold text-[#3F4B5B] mb-3 transition-colors duration-300 group-hover:text-indigo-700">
+                Federally Validated Innovation
+              </h3>
+              <p className="text-gray-700 leading-relaxed transition-colors duration-300 group-hover:text-gray-800">
                 EASI's development was funded by the National Science Foundation through a rigorous peer-review process.
                 Federal investment of over $2.5 million across NSF, NIH, IES, and AFWERX reflects independent scientific
                 validation of our approach. We built EASI as practicing clinicians—your trust is the foundation of
