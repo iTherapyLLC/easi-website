@@ -131,11 +131,14 @@ export function HeroSection() {
               }`}
             >
               <Button
+                asChild
                 size="lg"
                 className="bg-[#3B82F6] text-white hover:bg-[#2563EB] rounded-lg px-8 h-14 text-base font-medium group shadow-lg shadow-[#3B82F6]/25 hover:shadow-xl hover:shadow-[#3B82F6]/30 transition-all duration-300"
               >
-                Start 7-Day Free Trial
-                <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                <a href="https://www.northernspeech.com/" target="_blank" rel="noopener noreferrer">
+                  Start saving time today!
+                  <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </a>
               </Button>
               <Button
                 size="lg"

@@ -64,8 +64,13 @@ export function Header() {
                 Log In
               </a>
             </Button>
-            <Button className="text-sm bg-white text-[#3F4B5B] hover:bg-white/90 rounded-lg px-6 font-medium transition-all duration-300 hover:shadow-lg hover:shadow-white/20">
-              Start Free Trial
+            <Button
+              className="text-sm bg-white text-[#3F4B5B] hover:bg-white/90 rounded-lg px-6 font-medium transition-all duration-300 hover:shadow-lg hover:shadow-white/20"
+              asChild
+            >
+              <a href="https://www.northernspeech.com/" target="_blank" rel="noopener noreferrer">
+                Get EASI at Northern Speech
+              </a>
             </Button>
           </div>
 
@@ -124,7 +129,11 @@ export function Header() {
                   Log In
                 </a>
               </Button>
-              <Button className="bg-white text-[#3F4B5B] hover:bg-white/90 rounded-lg">Start Free Trial</Button>
+              <Button className="bg-white text-[#3F4B5B] hover:bg-white/90 rounded-lg" asChild>
+                <a href="https://www.northernspeech.com/" target="_blank" rel="noopener noreferrer">
+                  Get EASI at Northern Speech
+                </a>
+              </Button>
             </div>
           </div>
         </div>
