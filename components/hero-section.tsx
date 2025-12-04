@@ -141,12 +141,15 @@ export function HeroSection() {
                 </a>
               </Button>
               <Button
+                asChild
                 size="lg"
                 variant="outline"
                 className="rounded-lg px-8 h-14 text-base border-[#E5E7EB] hover:bg-[#F5F5F5] bg-white group"
               >
-                <Play className="mr-2 w-4 h-4 group-hover:scale-110 transition-transform" />
-                See How It Works
+                <a href="#how-it-works">
+                  <Play className="mr-2 w-4 h-4 group-hover:scale-110 transition-transform" />
+                  See How It Works
+                </a>
               </Button>
             </div>
 
@@ -225,7 +228,7 @@ export function HeroSection() {
               $<AnimatedCounter end={199} />
             </div>
             <div className="text-sm text-white/70 mt-1">Per Year</div>
-            <div className="text-xs text-white/50">ChatSLP + 10 Evaluations</div>
+            <div className="text-xs text-white/50">MySLP + 10 Evaluations</div>
           </div>
           <div className="text-center">
             <div className="text-3xl md:text-4xl font-bold text-white">

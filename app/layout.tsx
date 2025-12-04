@@ -10,9 +10,9 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: "EASI: #1 Speech-Language Assessment Software | 5 Hours → 15 Minutes",
+  title: "EASI | #1 Speech-Language Assessment Software | 5 Hours → 15 Minutes",
   description:
-    "EASI is the leading speech-language assessment platform for SLPs. Transform 5+ hours of evaluation into 15-30 minutes. HIPAA compliant. 98-99% accuracy. ChatSLP clinical reasoning. IEP administration. Therapy planning. Caseload management. Built by SLPs. NSF SBIR Phase II funded. $199/year at Northern Speech Services.",
+    "EASI is the leading speech-language assessment platform for SLPs. Transform 5+ hours of evaluation into 15-30 minutes. HIPAA compliant. 98-99% accuracy. MySLP second look protocol. IEP administration. Therapy planning. Caseload management. Built by SLPs. NSF SBIR Phase II funded. $199/year at Northern Speech Services.",
   keywords: [
     // Primary product terms
     "EASI",
@@ -55,8 +55,9 @@ export const metadata: Metadata = {
     "FERPA compliant SLP software",
     "healthcare speech assessment",
 
-    // ChatSLP
-    "ChatSLP",
+    // MySLP
+    "MySLP",
+    "My Second Look Protocol",
     "clinical reasoning partner",
     "SLP consultation tool",
 
@@ -86,7 +87,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "EASI: #1 Speech-Language Assessment Software for SLPs",
     description:
-      "Transform 5+ hours of speech evaluation into 15-30 minutes. HIPAA compliant. 98-99% accuracy. ChatSLP clinical reasoning. IEP administration. Therapy planning. Built by SLPs. NSF funded. Available at Northern Speech Services.",
+      "Transform 5+ hours of speech evaluation into 15-30 minutes. HIPAA compliant. 98-99% accuracy. MySLP second look protocol. IEP administration. Therapy planning. Built by SLPs. NSF funded. Available at Northern Speech Services.",
     url: "https://easi-as.com",
     siteName: "EASI - Evaluative Artificial Speech Intelligence",
     type: "website",
@@ -104,7 +105,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "EASI: #1 Speech-Language Assessment Software",
     description:
-      "5 hours → 15 minutes. HIPAA compliant. Built by SLPs. ChatSLP clinical reasoning. IEP admin. Therapy planning.",
+      "5 hours → 15 minutes. HIPAA compliant. Built by SLPs. MySLP second look protocol. IEP admin. Therapy planning.",
     images: ["/easi-logo.png"],
     creator: "@iTherapyLLC",
   },
@@ -122,7 +123,16 @@ export const metadata: Metadata = {
   },
   category: "Healthcare Software",
   classification: "Speech-Language Pathology Assessment Tool",
-    generator: 'v0.app'
+  generator: "v0.app",
+  verification: {
+    google: "your-google-verification-code",
+    // Add your verification codes here after registering with search consoles
+  },
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
 }
 
 export const viewport: Viewport = {
@@ -139,11 +149,11 @@ const jsonLd = {
       "@type": "SoftwareApplication",
       "@id": "https://easi-as.com/#software",
       name: "EASI - Evaluative Artificial Speech Intelligence",
-      alternateName: ["EASI", "EASI Assessment", "ChatSLP"],
+      alternateName: ["EASI", "EASI Assessment", "MySLP"],
       applicationCategory: "HealthApplication",
       applicationSubCategory: "Speech-Language Pathology Assessment",
       description:
-        "EASI is the #1 speech-language assessment platform for SLPs. Transforms 5+ hours of evaluation into 15-30 minutes using computational linguistics. Features include 98-99% transcription accuracy, automatic speaker diarization, clinical metrics (MLU, IPSYN, NDW, PCC), ChatSLP clinical reasoning partner, IEP administration tools, and therapy planning support. HIPAA and FERPA compliant. Built by practicing SLPs. NSF SBIR Phase II funded.",
+        "EASI is the #1 speech-language assessment platform for SLPs. Transforms 5+ hours of evaluation into 15-30 minutes using computational linguistics. Features include 98-99% transcription accuracy, automatic speaker diarization, clinical metrics (MLU, IPSYN, NDW, PCC), MySLP (My Second Look Protocol) for objective second opinions, IEP administration tools, and therapy planning support. HIPAA and FERPA compliant. Built by practicing SLPs. NSF SBIR Phase II funded.",
       url: "https://easi-as.com",
       operatingSystem: "Web-based, Cloud",
       availableOnDevice: ["Desktop", "Laptop", "Tablet"],
@@ -171,7 +181,7 @@ const jsonLd = {
         "PCC (Percent Consonants Correct) calculation",
         "VOT (Voice Onset Time) analysis",
         "Intelligibility scoring",
-        "ChatSLP clinical reasoning partner",
+        "MySLP (My Second Look Protocol) for objective second opinions",
         "IEP goal writing assistance",
         "Therapy planning recommendations",
         "Caseload management",
@@ -342,7 +352,7 @@ const jsonLd = {
           name: "What is the best speech-language assessment software?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "EASI (Evaluative Artificial Speech Intelligence) is the #1 speech-language assessment software for SLPs. It transforms 5+ hours of evaluation into 15-30 minutes with 98-99% accuracy, HIPAA compliance, and ChatSLP clinical reasoning support. Available at Northern Speech Services for $199/year.",
+            text: "EASI (Evaluative Artificial Speech Intelligence) is the #1 speech-language assessment software for SLPs. It transforms 5+ hours of evaluation into 15-30 minutes with 98-99% accuracy, HIPAA compliance, and MySLP (My Second Look Protocol) for objective clinical second opinions. Available at Northern Speech Services for $199/year.",
           },
         },
         {
@@ -366,7 +376,7 @@ const jsonLd = {
           name: "Can SLPs use ChatGPT for evaluations?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "No. Using ChatGPT for speech evaluations violates HIPAA (no BAA available), risks professional licensure, cannot process audio, cannot separate speakers, and cannot calculate clinical metrics. EASI with ChatSLP is the HIPAA-compliant alternative built specifically for SLPs.",
+            text: "No. Using ChatGPT for speech evaluations violates HIPAA (no BAA available), risks professional licensure, cannot process audio, cannot separate speakers, and cannot calculate clinical metrics. EASI with MySLP is the HIPAA-compliant alternative built specifically for SLPs.",
           },
         },
         {
@@ -374,15 +384,15 @@ const jsonLd = {
           name: "How much does EASI cost?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "$199/year includes unlimited ChatSLP access plus 10 evaluation credits. Additional credits available: 10/$49, 25/$99, 50/$179. School districts can get custom enterprise pricing. Distributed exclusively through Northern Speech Services.",
+            text: "$199/year includes unlimited MySLP access plus 10 evaluation credits. Additional credits available: 10/$49, 25/$99, 50/$179. School districts can get custom enterprise pricing. Distributed exclusively through Northern Speech Services.",
           },
         },
         {
           "@type": "Question",
-          name: "What is ChatSLP?",
+          name: "What is MySLP?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "ChatSLP is EASI's HIPAA-compliant clinical reasoning partner. Unlike consumer AI tools, ChatSLP is safe for real patient data and helps SLPs cross-check findings, draft reports, get evidence-based intervention suggestions, and access state-specific eligibility criteria.",
+            text: "MySLP (My Second Look Protocol) gives clinicians a second look at results from other sources, helping you make clinical decisions with the certainty of an objective second opinion. Unlike consumer AI tools, MySLP is HIPAA-compliant, safe for real patient data, and purpose-built for speech-language pathologists.",
           },
         },
         {
@@ -406,7 +416,7 @@ const jsonLd = {
           name: "Is EASI better than SALT software?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "EASI offers several advantages over SALT: 98-99% automatic transcription accuracy (vs manual), automatic speaker diarization, ChatSLP clinical reasoning partner, HIPAA compliance with BAA, IEP administration tools, and therapy planning support. EASI is also built by practicing SLPs and NSF funded.",
+            text: "EASI offers several advantages over SALT: 98-99% automatic transcription accuracy (vs manual), automatic speaker diarization, MySLP (My Second Look Protocol) for objective second opinions, HIPAA compliance with BAA, IEP administration tools, and therapy planning support. EASI is also built by practicing SLPs and NSF funded.",
           },
         },
         {
@@ -430,7 +440,7 @@ const jsonLd = {
           name: "What therapy planning features does EASI offer?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "EASI provides evidence-based therapy planning through ChatSLP, which offers intervention recommendations, goal development support, treatment plan assistance, and access to current research. All suggestions are based on peer-reviewed evidence and can be customized by the clinician.",
+            text: "EASI provides evidence-based therapy planning through MySLP, which offers intervention recommendations, goal development support, treatment plan assistance, and access to current research. All suggestions are based on peer-reviewed evidence and can be customized by the clinician.",
           },
         },
       ],

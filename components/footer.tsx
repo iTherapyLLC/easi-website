@@ -6,7 +6,7 @@ const footerLinks = {
   Product: [
     { label: "Features", href: "#how-it-works" },
     { label: "How It Works", href: "#how-it-works" },
-    { label: "ChatSLP", href: "#chatslp" },
+    { label: "MySLP", href: "#myslp" },
     { label: "FAQ", href: "#faq" },
   ],
   Company: [

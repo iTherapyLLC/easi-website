@@ -1,5 +1,5 @@
 # EASI - Evaluative Artificial Speech Intelligence
-# The leading speech-language assessment platform for SLPs
+# The #1 speech-language assessment platform for SLPs
 # https://easi-as.com
 
 User-agent: *
@@ -81,7 +81,15 @@ Allow: /
 User-agent: CCBot
 Allow: /
 
+User-agent: Bytespider
+Allow: /
+
+User-agent: Diffbot
+Allow: /
+
+# Sitemap location
 Sitemap: https://easi-as.com/sitemap.xml
 
 # LLM-readable content
 # See /llms.txt for AI-optimized content summary
+# See /.well-known/ai-plugin.json for ChatGPT plugin discovery

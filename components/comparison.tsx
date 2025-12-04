@@ -117,7 +117,7 @@ export function Comparison() {
                     <Shield className="w-7 h-7 text-green-600" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-[#1F2937]">EASI + ChatSLP</h3>
+                    <h3 className="text-xl font-bold text-[#1F2937]">EASI + MySLP</h3>
                     <p className="text-sm text-green-600">Purpose-built for clinical use</p>
                   </div>
                 </div>

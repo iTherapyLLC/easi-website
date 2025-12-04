@@ -5,7 +5,7 @@ import { AnimatedWrapper } from "./animated-wrapper"
 import Image from "next/image"
 
 const capabilities = [
-  "Cross-checks EASI results, flagging areas for human review",
+  "Cross-checks results from other sources, giving you a confident second opinion",
   "Synthesizes historical records into coherent record reviews",
   "Drafts diagnostic reports and IEP content from assessment data",
   "Suggests evidence-based intervention strategies",
@@ -14,9 +14,9 @@ const capabilities = [
 
 const limitations = ["Make final clinical decisions", "Operate without your approval", "Replace human judgment"]
 
-export function ChatSLP() {
+export function MySLP() {
   return (
-    <section id="chatslp" className="py-24 lg:py-32 bg-[#3F4B5B] text-white relative overflow-hidden">
+    <section id="myslp" className="py-24 lg:py-32 bg-[#3F4B5B] text-white relative overflow-hidden">
       {/* Animated background pattern */}
       <div className="absolute inset-0 opacity-5">
         <div
@@ -30,7 +30,7 @@ export function ChatSLP() {
 
       <div className="max-w-7xl mx-auto px-6 lg:px-8 relative">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
-          {/* Left side - ChatSLP Modal Preview */}
+          {/* Left side - MySLP Modal Preview */}
           <AnimatedWrapper animation="reveal-left">
             <div className="relative">
               {/* Glow effect */}
@@ -44,8 +44,8 @@ export function ChatSLP() {
                       <Image src="/easi-logo.png" alt="EASI Logo" width={32} height={32} className="object-contain" />
                     </div>
                     <div>
-                      <div className="font-semibold">ChatSLP</div>
-                      <div className="text-sm text-white/70">Clinical Colleague</div>
+                      <div className="font-semibold">MySLP</div>
+                      <div className="text-sm text-white/70">My Second Look Protocol</div>
                     </div>
                   </div>
                   <span className="text-xs bg-white/20 px-3 py-1 rounded-full flex items-center gap-1">
@@ -58,7 +58,7 @@ export function ChatSLP() {
                   <div className="text-center mb-6">
                     <h3 className="text-xl font-semibold text-[#1F2937]">What can I help you with today?</h3>
                     <p className="text-sm text-[#6B7280] mt-1">
-                      Choose a quick action or describe what you're working on
+                      Get a second look at your findings or describe what you're working on
                     </p>
                   </div>
 
@@ -93,18 +93,21 @@ export function ChatSLP() {
           {/* Right side - Description */}
           <AnimatedWrapper animation="reveal-right">
             <div>
-              <span className="text-sm uppercase tracking-widest text-white/60 mb-4 block">Powered by AI</span>
-              <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-6">Your Clinical Reasoning Partner</h2>
+              <span className="text-sm uppercase tracking-widest text-white/60 mb-4 block">
+                Your Second Look Protocol
+              </span>
+              <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-6">Your Objective Second Opinion</h2>
               <p className="text-xl text-white/80 mb-8 leading-relaxed">
-                ChatSLP isn't generic AI—it's purpose-built for speech-language pathologists, trained over 18 months
-                with practicing clinicians.
+                MySLP gives clinicians a second look at results from other sources, helping you make decisions with the
+                certainty of an objective second opinion. Purpose-built for speech-language pathologists, trained over
+                18 months with practicing clinicians.
               </p>
 
               {/* What it does */}
               <div className="bg-white/10 rounded-xl p-6 mb-6 backdrop-blur-sm">
                 <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
                   <CheckCircle2 className="w-5 h-5 text-[#14B8A6]" />
-                  What ChatSLP Does
+                  What MySLP Does
                 </h3>
                 <ul className="space-y-3">
                   {capabilities.map((item, index) => (
@@ -120,7 +123,7 @@ export function ChatSLP() {
               <div className="bg-white/5 rounded-xl p-6 backdrop-blur-sm">
                 <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
                   <XCircle className="w-5 h-5 text-white/40" />
-                  What ChatSLP Doesn't Do
+                  What MySLP Doesn't Do
                 </h3>
                 <ul className="space-y-3">
                   {limitations.map((item, index) => (

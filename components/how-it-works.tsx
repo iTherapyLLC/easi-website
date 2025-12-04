@@ -1,7 +1,7 @@
 "use client"
 
 import Image from "next/image"
-import { Mic, AudioWaveform as Waveform, BarChart3, FileText } from "lucide-react"
+import { Mic, AudioWaveform as Waveform, BarChart3, FileText, Brain, Upload, Shield, MessageSquare } from "lucide-react"
 import { AnimatedWrapper } from "./animated-wrapper"
 
 const steps = [
@@ -45,6 +45,48 @@ const steps = [
     color: "#F59E0B",
     image: "/easi-report-introduction.png",
     features: ["Comprehensive evaluation reports", "CPT codes included", "Full clinical control"],
+  },
+]
+
+const capabilities = [
+  {
+    icon: Brain,
+    title: "Computational Language Analysis",
+    description:
+      "Generates standard scores and percentile rankings for MLU, IPSYN, vocabulary diversity, and social function analysis.",
+    color: "#8B5CF6",
+  },
+  {
+    icon: Waveform,
+    title: "Speech Recognition & Diarization",
+    description: "Separates and identifies multiple speakers with real-time feedback during assessments.",
+    color: "#14B8A6",
+  },
+  {
+    icon: Upload,
+    title: "IEP Management",
+    description:
+      "Upload medical reports, existing IEPs, and developmental histories. EASI extracts relevant data for goal creation.",
+    color: "#3B82F6",
+  },
+  {
+    icon: MessageSquare,
+    title: "MySLP Second Opinion",
+    description:
+      "Interactive assistance provides clinicians with real-time guidance and a second look at assessment results.",
+    color: "#F59E0B",
+  },
+  {
+    icon: FileText,
+    title: "Computer Vision Protocol Analysis",
+    description: "Upload images of test protocols for automatic data extraction—no manual entry required.",
+    color: "#EC4899",
+  },
+  {
+    icon: Shield,
+    title: "HIPAA & FERPA Compliant",
+    description: "Enterprise-grade security built from the ground up for healthcare and education settings.",
+    color: "#10B981",
   },
 ]
 
@@ -160,6 +202,37 @@ export function HowItWorks() {
             </AnimatedWrapper>
           ))}
         </div>
+
+        <AnimatedWrapper className="mt-32">
+          <div className="text-center mb-16">
+            <h3 className="text-3xl md:text-4xl font-bold tracking-tight mb-4 text-[#1F2937]">
+              Complete Platform Capabilities
+            </h3>
+            <p className="text-lg text-[#6B7280] max-w-2xl mx-auto">
+              Everything you need for efficient, accurate speech-language assessments
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {capabilities.map((capability, index) => (
+              <div
+                key={index}
+                className="group bg-white rounded-2xl p-6 border border-[#E5E7EB] shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+              >
+                <div
+                  className="w-14 h-14 rounded-xl flex items-center justify-center mb-4 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3"
+                  style={{ backgroundColor: `${capability.color}15` }}
+                >
+                  <capability.icon className="w-7 h-7" style={{ color: capability.color }} />
+                </div>
+                <h4 className="text-xl font-semibold text-[#1F2937] mb-2 group-hover:text-[#14B8A6] transition-colors">
+                  {capability.title}
+                </h4>
+                <p className="text-[#6B7280] leading-relaxed">{capability.description}</p>
+              </div>
+            ))}
+          </div>
+        </AnimatedWrapper>
       </div>
     </section>
   )

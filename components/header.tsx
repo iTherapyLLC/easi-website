@@ -9,7 +9,7 @@ import { cn } from "@/lib/utils"
 
 const navItems = [
   { label: "Features", href: "#how-it-works" },
-  { label: "ChatSLP", href: "#chatslp" },
+  { label: "MySLP", href: "#myslp" },
   { label: "Why EASI", href: "#comparison" },
   { label: "Team", href: "#team" },
   { label: "FAQ", href: "#faq" },

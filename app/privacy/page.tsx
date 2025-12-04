@@ -350,7 +350,7 @@ export default function PrivacyPage() {
                   specified
                 </li>
                 <li>
-                  <strong>Conversational Data (ChatSLP):</strong> Automatic 24-hour deletion via DynamoDB TTL
+                  <strong>Conversational Data (MySLP):</strong> Automatic 24-hour deletion via DynamoDB TTL
                 </li>
                 <li>
                   <strong>Audit Logs:</strong> Retained for 7 years to comply with federal record-keeping requirements

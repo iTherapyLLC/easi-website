@@ -3,7 +3,7 @@ import { BetaBanner } from "@/components/beta-banner"
 import { HeroSection } from "@/components/hero-section"
 import { ValueProposition } from "@/components/value-proposition"
 import { HowItWorks } from "@/components/how-it-works"
-import { ChatSLP } from "@/components/chat-slp"
+import { MySLP } from "@/components/chat-slp"
 import { Comparison } from "@/components/comparison"
 import { SecuritySection } from "@/components/security-section"
 import { TeamSection } from "@/components/team-section"
@@ -21,7 +21,7 @@ export default function Home() {
       <HeroSection />
       <ValueProposition />
       <HowItWorks />
-      <ChatSLP />
+      <MySLP />
       <Comparison />
       <SecuritySection />
       <TeamSection />
