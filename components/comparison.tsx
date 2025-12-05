@@ -3,6 +3,7 @@
 import Image from "next/image"
 import { Shield, ShieldAlert, Check, X, AlertTriangle } from "lucide-react"
 import { AnimatedWrapper } from "./animated-wrapper"
+import { motion } from "framer-motion"
 
 const comparisonData = [
   { feature: "HIPAA Compliance", chatgpt: false, easi: true, easiNote: "Full BAA provided" },
@@ -33,44 +34,145 @@ export function Comparison() {
         <AnimatedWrapper delay={100}>
           <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto mb-16">
             {/* The Old Way - Before */}
-            <div className="relative group">
-              <div className="aspect-[4/3] rounded-2xl overflow-hidden border-2 border-red-200">
+            <motion.div
+              className="relative group cursor-pointer"
+              whileHover={{ scale: 1.03, y: -8 }}
+              transition={{ type: "spring", stiffness: 300, damping: 20 }}
+            >
+              <motion.div
+                className="aspect-[4/3] rounded-2xl overflow-hidden border-2 border-red-200 relative"
+                whileHover={{
+                  borderColor: "rgb(239, 68, 68)",
+                  boxShadow: "0 25px 50px -12px rgba(239, 68, 68, 0.35)",
+                }}
+              >
                 <Image
                   src="/diverse-slp-working-late.jpg"
                   alt="The old way - exhausted SLP working late into the night"
                   fill
-                  className="object-cover"
+                  className="object-cover transition-transform duration-500 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-red-900/60 to-transparent" />
+                {/* Animated gradient overlay */}
+                <motion.div
+                  className="absolute inset-0 bg-gradient-to-t from-red-900/60 via-red-900/20 to-transparent"
+                  whileHover={{ opacity: 0.9 }}
+                  transition={{ duration: 0.3 }}
+                />
+                {/* Scan line effect on hover */}
+                <motion.div
+                  className="absolute inset-0 opacity-0 group-hover:opacity-100 pointer-events-none"
+                  style={{
+                    backgroundImage: "linear-gradient(transparent 50%, rgba(239, 68, 68, 0.1) 50%)",
+                    backgroundSize: "100% 4px",
+                  }}
+                />
                 <div className="absolute bottom-4 left-4 right-4">
-                  <span className="inline-flex items-center gap-2 px-3 py-1 bg-red-500 text-white text-sm font-medium rounded-full mb-2">
-                    <X className="w-4 h-4" />
+                  <motion.span
+                    className="inline-flex items-center gap-2 px-3 py-1 bg-red-500 text-white text-sm font-medium rounded-full mb-2"
+                    whileHover={{ scale: 1.1, x: 5 }}
+                  >
+                    <motion.span
+                      animate={{ rotate: [0, 10, -10, 0] }}
+                      transition={{ duration: 0.5, repeat: Number.POSITIVE_INFINITY, repeatDelay: 2 }}
+                    >
+                      <X className="w-4 h-4" />
+                    </motion.span>
                     The Old Way
-                  </span>
-                  <p className="text-white font-semibold text-lg drop-shadow-lg">9:15 PM. Still working.</p>
+                  </motion.span>
+                  <motion.p
+                    className="text-white font-semibold text-lg drop-shadow-lg"
+                    initial={{ opacity: 0.9 }}
+                    whileHover={{ opacity: 1, x: 5 }}
+                  >
+                    9:15 PM. Still working.
+                  </motion.p>
                 </div>
-              </div>
-            </div>
+                {/* Corner accent */}
+                <motion.div className="absolute top-0 right-0 w-0 h-0 border-t-[60px] border-t-red-500 border-l-[60px] border-l-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              </motion.div>
+            </motion.div>
 
             {/* The New Way - After */}
-            <div className="relative group">
-              <div className="aspect-[4/3] rounded-2xl overflow-hidden border-2 border-green-200">
+            <motion.div
+              className="relative group cursor-pointer"
+              whileHover={{ scale: 1.03, y: -8 }}
+              transition={{ type: "spring", stiffness: 300, damping: 20 }}
+            >
+              <motion.div
+                className="aspect-[4/3] rounded-2xl overflow-hidden border-2 border-green-200 relative"
+                whileHover={{
+                  borderColor: "rgb(34, 197, 94)",
+                  boxShadow: "0 25px 50px -12px rgba(34, 197, 94, 0.35)",
+                }}
+              >
                 <Image
                   src="/slp-casual-professional-happy.jpg"
                   alt="The new way - SLP in casual professional attire leaving work at reasonable hour, relaxed and satisfied"
                   fill
-                  className="object-cover"
+                  className="object-cover transition-transform duration-500 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-green-900/40 to-transparent" />
+                {/* Animated gradient overlay */}
+                <motion.div
+                  className="absolute inset-0 bg-gradient-to-t from-green-900/40 via-transparent to-transparent"
+                  whileHover={{ opacity: 0.7 }}
+                  transition={{ duration: 0.3 }}
+                />
+                {/* Shimmer effect on hover */}
+                <motion.div className="absolute inset-0 opacity-0 group-hover:opacity-100 pointer-events-none overflow-hidden">
+                  <motion.div
+                    className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full"
+                    animate={{ x: ["100%", "-100%"] }}
+                    transition={{ duration: 1.5, repeat: Number.POSITIVE_INFINITY, repeatDelay: 1 }}
+                  />
+                </motion.div>
                 <div className="absolute bottom-4 left-4 right-4">
-                  <span className="inline-flex items-center gap-2 px-3 py-1 bg-green-500 text-white text-sm font-medium rounded-full mb-2">
-                    <Check className="w-4 h-4" />
+                  <motion.span
+                    className="inline-flex items-center gap-2 px-3 py-1 bg-green-500 text-white text-sm font-medium rounded-full mb-2"
+                    whileHover={{ scale: 1.1, x: 5 }}
+                  >
+                    <motion.span
+                      animate={{ scale: [1, 1.2, 1] }}
+                      transition={{ duration: 0.6, repeat: Number.POSITIVE_INFINITY, repeatDelay: 2 }}
+                    >
+                      <Check className="w-4 h-4" />
+                    </motion.span>
                     With EASI
-                  </span>
-                  <p className="text-white font-semibold text-lg drop-shadow-lg">4:30 PM. Work complete.</p>
+                  </motion.span>
+                  <motion.p
+                    className="text-white font-semibold text-lg drop-shadow-lg"
+                    initial={{ opacity: 0.9 }}
+                    whileHover={{ opacity: 1, x: 5 }}
+                  >
+                    4:30 PM. Work complete.
+                  </motion.p>
                 </div>
-              </div>
-            </div>
+                {/* Corner accent with checkmark */}
+                <motion.div className="absolute top-0 right-0 w-0 h-0 border-t-[60px] border-t-green-500 border-l-[60px] border-l-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                {/* Floating particles on hover */}
+                <div className="absolute inset-0 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                  {[...Array(5)].map((_, i) => (
+                    <motion.div
+                      key={i}
+                      className="absolute w-2 h-2 bg-green-400 rounded-full"
+                      style={{
+                        left: `${20 + i * 15}%`,
+                        bottom: "20%",
+                      }}
+                      animate={{
+                        y: [-10, -40, -10],
+                        opacity: [0.5, 1, 0.5],
+                        scale: [0.8, 1.2, 0.8],
+                      }}
+                      transition={{
+                        duration: 2,
+                        repeat: Number.POSITIVE_INFINITY,
+                        delay: i * 0.2,
+                      }}
+                    />
+                  ))}
+                </div>
+              </motion.div>
+            </motion.div>
           </div>
         </AnimatedWrapper>
 
