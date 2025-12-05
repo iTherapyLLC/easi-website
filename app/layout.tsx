@@ -466,7 +466,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en" className="scroll-smooth overflow-x-hidden">
       <head>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
         {/* Additional meta tags for AI discovery */}
@@ -476,7 +476,7 @@ export default function RootLayout({
         />
         <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
       </head>
-      <body className={`${inter.variable} antialiased font-sans`}>{children}</body>
+      <body className={`${inter.variable} antialiased font-sans overflow-x-hidden w-full`}>{children}</body>
     </html>
   )
 }

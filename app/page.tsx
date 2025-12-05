@@ -15,7 +15,7 @@ import { ChatAssistant } from "@/components/chat-assistant"
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-[#F5F5F5]">
+    <main className="min-h-screen bg-[#F5F5F5] overflow-x-hidden w-full max-w-full">
       <BetaBanner />
       <Header />
       <HeroSection />
