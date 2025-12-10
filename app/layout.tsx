@@ -85,29 +85,40 @@ export const metadata: Metadata = {
     apple: "/easi-logo.png",
   },
   openGraph: {
-    title: "EASI: #1 Speech-Language Assessment Software for SLPs",
+    title: "Finally Leave Work at 5pm. Every Day. | EASI for SLPs",
     description:
-      "Transform 5+ hours of speech evaluation into 15-30 minutes. HIPAA compliant. 98-99% accuracy. MySLP second look protocol. IEP administration. Therapy planning. Built by SLPs. NSF funded. Available at Northern Speech Services.",
+      "Transform 5+ hours of speech evaluation into 15-30 minutes. No more weekend report writing. 98-99% accuracy. HIPAA compliant. Built by SLPs who understand your burnout. $199/year.",
     url: "https://easi-as.com",
     siteName: "EASI - Evaluative Artificial Speech Intelligence",
     type: "website",
     locale: "en_US",
     images: [
       {
+        url: "/professional-woman-speech-language-pathologist-ear.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Happy speech-language pathologist enjoying work-life balance with EASI",
+        type: "image/jpeg",
+      },
+      {
         url: "/easi-logo.png",
         width: 512,
         height: 512,
-        alt: "EASI - The #1 Speech-Language Assessment Platform for SLPs",
+        alt: "EASI Logo",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "EASI: #1 Speech-Language Assessment Software",
+    title: "Finally Leave Work at 5pm. Every Day.",
     description:
-      "5 hours → 15 minutes. HIPAA compliant. Built by SLPs. MySLP second look protocol. IEP admin. Therapy planning.",
-    images: ["/easi-logo.png"],
+      "EASI transforms 5+ hours of speech evaluation into 15-30 minutes. No more weekend reports. Built by SLPs who get it. HIPAA compliant. $199/year.",
+    images: {
+      url: "/professional-woman-speech-language-pathologist-ear.jpg",
+      alt: "Happy speech-language pathologist enjoying work-life balance with EASI",
+    },
     creator: "@iTherapyLLC",
+    site: "@iTherapyLLC",
   },
   robots: {
     index: true,
@@ -132,6 +143,12 @@ export const metadata: Metadata = {
     email: false,
     address: false,
     telephone: false,
+  },
+  other: {
+    "og:image:width": "1200",
+    "og:image:height": "630",
+    "twitter:image:width": "1200",
+    "twitter:image:height": "630",
   },
 }
 

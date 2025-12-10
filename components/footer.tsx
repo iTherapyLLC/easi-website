@@ -1,6 +1,6 @@
 import Link from "next/link"
 import Image from "next/image"
-import { Mail, Phone, MapPin, Shield } from "lucide-react"
+import { Phone, MapPin, Shield } from "lucide-react"
 
 const footerLinks = {
   Product: [
@@ -13,7 +13,7 @@ const footerLinks = {
     { label: "About Us", href: "#team" },
     { label: "Team", href: "#team" },
     { label: "Research", href: "#" },
-    { label: "Contact", href: "mailto:admin@itherapyllc.com" },
+    { label: "Contact", href: "/contact" },
   ],
   Legal: [
     { label: "Privacy & Security Policy", href: "/privacy" },
@@ -42,7 +42,7 @@ export function Footer() {
             </p>
             <p className="text-sm text-white/60 mb-6">Distributed exclusively through Northern Speech Services</p>
 
-            {/* Contact info */}
+            {/* Contact info - Removed email, kept phone and location, added contact form link */}
             <div className="space-y-2">
               <a
                 href="tel:707-651-9915"
@@ -51,13 +51,12 @@ export function Footer() {
                 <Phone className="w-4 h-4" />
                 707-651-9915
               </a>
-              <a
-                href="mailto:admin@itherapyllc.com"
-                className="flex items-center gap-2 text-sm text-white/60 hover:text-white transition-colors"
+              <Link
+                href="/contact"
+                className="flex items-center gap-2 text-sm text-[#14B8A6] hover:text-[#14B8A6]/80 transition-colors font-medium"
               >
-                <Mail className="w-4 h-4" />
-                admin@itherapyllc.com
-              </a>
+                Contact Us →
+              </Link>
               <div className="flex items-center gap-2 text-sm text-white/60">
                 <MapPin className="w-4 h-4" />
                 Vallejo, CA
