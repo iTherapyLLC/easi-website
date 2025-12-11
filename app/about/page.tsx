@@ -315,7 +315,7 @@ export default function AboutPage() {
               Join thousands of SLPs who have reclaimed their time with EASI.
             </p>
             <Button size="lg" className="bg-white text-teal-700 hover:bg-teal-50 text-lg px-8 py-6 h-auto" asChild>
-              <a href="https://www.northernspeech.com/" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.northernspeech.com/12648/" target="_blank" rel="noopener noreferrer">
                 Get EASI at Northern Speech Services
                 <ArrowRight className="ml-2 h-5 w-5" />
               </a>

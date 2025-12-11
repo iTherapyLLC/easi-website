@@ -185,7 +185,7 @@ const jsonLd = {
         seller: {
           "@type": "Organization",
           name: "Northern Speech Services",
-          url: "https://northernspeech.com",
+          url: "https://www.northernspeech.com/12648/",
         },
       },
       featureList: [
@@ -248,7 +248,7 @@ const jsonLd = {
       },
       telephone: "+1-707-651-9915",
       email: "admin@itherapyllc.com",
-      sameAs: ["https://northernspeech.com"],
+      sameAs: ["https://www.northernspeech.com/12648/"],
       founder: [
         {
           "@type": "Person",
@@ -335,7 +335,7 @@ const jsonLd = {
         seller: {
           "@type": "Organization",
           name: "Northern Speech Services",
-          url: "https://northernspeech.com",
+          url: "https://www.northernspeech.com/12648/",
         },
         priceValidUntil: "2025-12-31",
       },
@@ -441,7 +441,7 @@ const jsonLd = {
           name: "Where can I buy EASI?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "EASI is distributed exclusively through Northern Speech Services at northernspeech.com. Northern Speech Services has served the SLP community for 50 years and is the trusted source for clinical tools and resources.",
+            text: "EASI is distributed exclusively through Northern Speech Services. Purchase at: https://www.northernspeech.com/12648/",
           },
         },
         {

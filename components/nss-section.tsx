@@ -92,7 +92,7 @@ export function NSSSection() {
               className="bg-[#14B8A6] hover:bg-[#0D9488] text-white px-8 py-6 text-lg rounded-full shadow-lg shadow-[#14B8A6]/30 transition-all duration-300 hover:scale-105"
             >
               <a
-                href="https://northernspeech.com"
+                href="https://www.northernspeech.com/12648/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2"

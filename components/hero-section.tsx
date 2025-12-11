@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
-import { ArrowRight, Shield, Clock, Award, Play } from "lucide-react"
+import { ArrowRight, Shield, Award, Play } from "lucide-react"
 
 function AnimatedCounter({ end, suffix = "", duration = 2000 }: { end: number; suffix?: string; duration?: number }) {
   const [count, setCount] = useState(0)
@@ -135,7 +135,7 @@ export function HeroSection() {
                 size="lg"
                 className="bg-[#3B82F6] text-white hover:bg-[#2563EB] rounded-lg px-8 h-14 text-base font-medium group shadow-lg shadow-[#3B82F6]/25 hover:shadow-xl hover:shadow-[#3B82F6]/30 transition-all duration-300"
               >
-                <a href="https://www.northernspeech.com/" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.northernspeech.com/12648/" target="_blank" rel="noopener noreferrer">
                   Start saving time today!
                   <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </a>
@@ -166,10 +166,6 @@ export function HeroSection() {
               <div className="flex items-center gap-2 text-sm text-[#6B7280]">
                 <Shield className="w-5 h-5 text-[#14B8A6]" />
                 <span>FERPA Compliant</span>
-              </div>
-              <div className="flex items-center gap-2 text-sm text-[#6B7280]">
-                <Clock className="w-5 h-5 text-[#14B8A6]" />
-                <span>No Credit Card Required</span>
               </div>
             </div>
           </div>

@@ -1,35 +1,45 @@
 "use client"
 
 import Image from "next/image"
+import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { ArrowRight, Sparkles, Users, BookOpen } from "lucide-react"
+import { ArrowRight, Sparkles, Users, MessageCircle } from "lucide-react"
 import { AnimatedWrapper } from "./animated-wrapper"
 
 const ctaOptions = [
   {
     title: "Individual SLPs",
-    description: "Start your 7-day free trial. No credit card required.",
+    description: "Turn 5-hour evaluations into 15 minutes. Starting at $199/year.",
     icon: Sparkles,
-    cta: "Start Trial",
+    cta: "Get Started",
+    href: "https://www.northernspeech.com/12648/", // Updated NSS link to specific product page
     primary: true,
+    action: "link" as const,
   },
   {
     title: "School Districts",
-    description: "See a customized demo. Calculate your ROI.",
+    description: "Volume pricing for your team. See a customized demo.",
     icon: Users,
-    cta: "Schedule Demo",
+    cta: "Request Quote",
+    href: "/contact?type=district",
     primary: false,
+    action: "link" as const,
   },
   {
-    title: "Learn More",
-    description: "Watch demo videos. Read the research.",
-    icon: BookOpen,
-    cta: "Explore Resources",
+    title: "Talk to EASI",
+    description: "Speak to our EASI agent about all of EASI's features!",
+    icon: MessageCircle,
+    cta: "Ask EASI",
     primary: false,
+    action: "chat" as const,
   },
 ]
 
 export function CTASection() {
+  const openChat = () => {
+    window.dispatchEvent(new CustomEvent("openEasiChat"))
+  }
+
   return (
     <section className="py-24 lg:py-32 bg-[#F5F5F5] relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
@@ -48,7 +58,7 @@ export function CTASection() {
             <div className="relative p-12 lg:p-20">
               {/* Animated gradient accents */}
               <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                <div className="absolute -top-1/2 -left-1/2 w-full h-full bg-gradient-to-br from-[#8B5CF6]/20 to-transparent rounded-full blur-3xl animate-float" />
+                <div className="absolute -top-1/2 -left-1/2 w-full h-full bg-gradient-to-br from-[#14B8A6]/20 to-transparent rounded-full blur-3xl animate-float" />
                 <div
                   className="absolute -bottom-1/2 -right-1/2 w-full h-full bg-gradient-to-tl from-[#14B8A6]/20 to-transparent rounded-full blur-3xl animate-float"
                   style={{ animationDelay: "3s" }}
@@ -70,21 +80,35 @@ export function CTASection() {
                 {ctaOptions.map((option, index) => (
                   <AnimatedWrapper key={index} delay={index * 100} animation="reveal-scale">
                     <div className="bg-white rounded-xl p-6 text-left hover:shadow-xl hover:-translate-y-1 transition-all duration-300 h-full flex flex-col">
-                      <div className="w-10 h-10 rounded-lg bg-[#8B5CF6]/10 flex items-center justify-center mb-4">
-                        <option.icon className="w-5 h-5 text-[#8B5CF6]" />
+                      <div className="w-10 h-10 rounded-lg bg-[#14B8A6]/10 flex items-center justify-center mb-4">
+                        <option.icon className="w-5 h-5 text-[#14B8A6]" />
                       </div>
                       <h3 className="font-bold text-[#1F2937] mb-2">{option.title}</h3>
                       <p className="text-[#6B7280] text-sm mb-4 flex-grow">{option.description}</p>
-                      <Button
-                        className={`w-full justify-center ${
-                          option.primary
-                            ? "bg-[#3B82F6] hover:bg-[#2563EB] text-white"
-                            : "bg-white border border-[#E5E7EB] text-[#1F2937] hover:bg-[#F5F5F5]"
-                        }`}
-                      >
-                        {option.cta}
-                        <ArrowRight className="w-4 h-4 ml-2" />
-                      </Button>
+
+                      {option.action === "link" ? (
+                        <Button
+                          asChild
+                          className={`w-full justify-center ${
+                            option.primary
+                              ? "bg-[#3B82F6] hover:bg-[#2563EB] text-white"
+                              : "bg-white border border-[#E5E7EB] text-[#1F2937] hover:bg-[#F5F5F5]"
+                          }`}
+                        >
+                          <Link href={option.href || "#"}>
+                            {option.cta}
+                            <ArrowRight className="w-4 h-4 ml-2" />
+                          </Link>
+                        </Button>
+                      ) : (
+                        <Button
+                          onClick={openChat}
+                          className="w-full justify-center bg-gradient-to-r from-[#14B8A6] to-[#3B82F6] hover:from-[#0D9488] hover:to-[#2563EB] text-white"
+                        >
+                          {option.cta}
+                          <ArrowRight className="w-4 h-4 ml-2" />
+                        </Button>
+                      )}
                     </div>
                   </AnimatedWrapper>
                 ))}
@@ -92,13 +116,10 @@ export function CTASection() {
 
               <div className="relative text-center mt-10">
                 <p className="text-sm text-white/60">
-                  Questions? Email{" "}
-                  <a
-                    href="mailto:admin@itherapyllc.com"
-                    className="text-white/80 hover:text-white underline transition-colors"
-                  >
-                    admin@itherapyllc.com
-                  </a>
+                  Questions?{" "}
+                  <Link href="/contact" className="text-white/80 hover:text-white underline transition-colors">
+                    Contact us
+                  </Link>
                 </p>
               </div>
             </div>

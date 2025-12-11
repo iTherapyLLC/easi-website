@@ -390,7 +390,7 @@ export default function ComparisonPage() {
           <p className="text-xl text-slate-300 mb-8">Join hundreds of SLPs who are reclaiming their time with EASI.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button asChild size="lg" className="bg-teal-500 hover:bg-teal-600 text-white">
-              <a href="https://www.northernspeech.com" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.northernspeech.com/12648/" target="_blank" rel="noopener noreferrer">
                 Get EASI at Northern Speech
                 <ArrowRight className="ml-2 w-5 h-5" />
               </a>

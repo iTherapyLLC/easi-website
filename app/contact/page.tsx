@@ -112,7 +112,7 @@ export default function ContactPage() {
                     Services for educational institutions.
                   </p>
                   <a
-                    href="https://www.northernspeech.com/easi/"
+                    href="https://www.northernspeech.com/12648/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 text-[#14B8A6] text-sm font-medium hover:underline"
