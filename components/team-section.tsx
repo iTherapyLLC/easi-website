@@ -1,6 +1,7 @@
 "use client"
 
 import { AnimatedWrapper } from "./animated-wrapper"
+import { AnimatedTitle } from "./animated-title"
 import { Award, BookOpen, Brain, MessageCircle, Microscope, Users, GraduationCap } from "lucide-react"
 import Image from "next/image"
 
@@ -42,9 +43,9 @@ export function TeamSection() {
     <section id="team" className="py-24 lg:py-32 bg-[#F5F5F5]">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <AnimatedWrapper className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-6 text-[#1F2937]">
+          <AnimatedTitle as="h2" className="text-4xl md:text-5xl font-bold tracking-tight mb-6 text-[#1F2937]">
             Built by SLPs Who Lived Your Challenges
-          </h2>
+          </AnimatedTitle>
           <p className="text-lg text-[#6B7280] max-w-2xl mx-auto">
             We're practicing clinicians who built what we desperately needed in our own practice.
           </p>

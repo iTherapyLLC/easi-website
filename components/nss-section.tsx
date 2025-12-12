@@ -4,6 +4,7 @@ import { useRef } from "react"
 import { motion, useInView } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { Check, ExternalLink } from "lucide-react"
+import { AnimatedTitleMultiLine } from "@/components/animated-title"
 
 const benefits = [
   "Established reputation in the SLP community",
@@ -44,9 +45,15 @@ export function NSSSection() {
             <span className="text-[#14B8A6] font-medium text-sm">Exclusive Partner</span>
           </motion.div>
 
-          <h2 className="font-serif text-4xl md:text-5xl text-white mb-4 text-balance">
-            Distributed Exclusively Through Northern Speech Services
-          </h2>
+          <AnimatedTitleMultiLine
+            lines={[
+              { text: "Distributed Exclusively Through", className: "text-white" },
+              { text: "Northern Speech Services", className: "text-[#14B8A6]" },
+            ]}
+            as="h2"
+            containerClassName="text-4xl md:text-5xl font-bold mb-4 text-balance"
+            activeColor="#14B8A6"
+          />
           <p className="text-xl text-white/80 font-medium mb-6">Your Trusted Partner for 50 Years</p>
           <p className="text-lg text-white/70 leading-relaxed">
             Northern Speech Services has been serving the SLP community for five decades, bringing you proven solutions

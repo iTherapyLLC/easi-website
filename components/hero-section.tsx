@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { ArrowRight, Shield, Award, Play } from "lucide-react"
+import { AnimatedTitleMultiLine } from "./animated-title"
 
 function AnimatedCounter({ end, suffix = "", duration = 2000 }: { end: number; suffix?: string; duration?: number }) {
   const [count, setCount] = useState(0)
@@ -102,17 +103,20 @@ export function HeroSection() {
             </div>
 
             {/* Main Heading */}
-            <h1
-              className={`text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] tracking-tight mb-6 transition-all duration-1000 delay-200 ${
+            <div
+              className={`mb-6 transition-all duration-1000 delay-200 ${
                 isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
               }`}
             >
-              <span className="text-[#1F2937]">Leave Work at 5pm.</span>
-              <br />
-              <span className="bg-gradient-to-r from-[#8B5CF6] to-[#14B8A6] bg-clip-text text-transparent">
-                Every Day.
-              </span>
-            </h1>
+              <AnimatedTitleMultiLine
+                as="h1"
+                containerClassName="text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] tracking-tight"
+                lines={[
+                  { text: "Leave Work at 5pm.", className: "text-[#1F2937]" },
+                  { text: "Every Day.", gradient: true, gradientFrom: "#8B5CF6", gradientTo: "#14B8A6" },
+                ]}
+              />
+            </div>
 
             {/* Subheading */}
             <p

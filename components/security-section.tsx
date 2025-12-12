@@ -16,6 +16,7 @@ import {
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
+import { AnimatedTitle } from "@/components/animated-title"
 
 const complianceItems = [
   {
@@ -104,14 +105,25 @@ export function SecuritySection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-100 text-blue-700 text-sm font-medium mb-6">
-            <ShieldCheck className="w-4 h-4" />
-            Security & Compliance
+          <div className="flex justify-center mb-6">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-100 text-blue-700 text-sm font-medium">
+              <ShieldCheck className="w-4 h-4" />
+              Security & Compliance
+            </div>
           </div>
-          <h2 className="text-4xl md:text-5xl font-serif font-medium text-[#3F4B5B] mb-6">
-            Enterprise-Grade Security, <span className="text-blue-600">Built for Healthcare & Education</span>
-          </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <AnimatedTitle
+            as="h2"
+            text="Enterprise-Grade Security"
+            className="text-4xl md:text-5xl font-sans font-bold text-[#3F4B5B] mb-2"
+            activeColor="#3B82F6"
+          />
+          <AnimatedTitle
+            as="span"
+            text="Built for Healthcare & Education"
+            className="text-4xl md:text-5xl font-sans font-bold text-[#14B8A6] block"
+            activeColor="#0D9488"
+          />
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed mt-6">
             EASI was designed from the ground up to protect sensitive clinical and student data. Your patients' privacy,
             your students' information, and your professional compliance are non-negotiable.
           </p>

@@ -3,6 +3,7 @@
 import Image from "next/image"
 import { User, Users, Building } from "lucide-react"
 import { AnimatedWrapper } from "./animated-wrapper"
+import { AnimatedTitle } from "./animated-title"
 
 const benefits = [
   {
@@ -41,9 +42,9 @@ export function ValueProposition() {
 
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <AnimatedWrapper className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-6 text-[#1F2937]">
+          <AnimatedTitle as="h2" className="text-4xl md:text-5xl font-bold tracking-tight mb-6 text-[#1F2937]">
             The Time You'll Get Back
-          </h2>
+          </AnimatedTitle>
           <p className="text-lg text-[#6B7280] max-w-2xl mx-auto">What saving 4+ hours per evaluation really means</p>
         </AnimatedWrapper>
 

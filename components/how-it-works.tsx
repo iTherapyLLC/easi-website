@@ -3,6 +3,7 @@
 import Image from "next/image"
 import { Mic, AudioWaveform as Waveform, BarChart3, FileText, Brain, Upload, Shield, MessageSquare } from "lucide-react"
 import { AnimatedWrapper } from "./animated-wrapper"
+import { AnimatedTitle } from "./animated-title"
 
 const steps = [
   {
@@ -95,9 +96,9 @@ export function HowItWorks() {
     <section id="how-it-works" className="py-24 lg:py-32 bg-[#F5F5F5]">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <AnimatedWrapper className="text-center mb-20">
-          <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-6 text-[#1F2937]">
+          <AnimatedTitle as="h2" className="text-4xl md:text-5xl font-bold tracking-tight mb-6 text-[#1F2937]">
             Assessment That Works the Way You Work
-          </h2>
+          </AnimatedTitle>
           <p className="text-lg text-[#6B7280] max-w-2xl mx-auto">
             From natural recording to professional reports in minutes
           </p>
@@ -205,9 +206,9 @@ export function HowItWorks() {
 
         <AnimatedWrapper className="mt-32">
           <div className="text-center mb-16">
-            <h3 className="text-3xl md:text-4xl font-bold tracking-tight mb-4 text-[#1F2937]">
+            <AnimatedTitle as="h3" className="text-3xl md:text-4xl font-bold tracking-tight mb-4 text-[#1F2937]">
               Complete Platform Capabilities
-            </h3>
+            </AnimatedTitle>
             <p className="text-lg text-[#6B7280] max-w-2xl mx-auto">
               Everything you need for efficient, accurate speech-language assessments
             </p>

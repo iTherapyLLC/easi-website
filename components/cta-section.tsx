@@ -5,6 +5,7 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { ArrowRight, Sparkles, Users, MessageCircle } from "lucide-react"
 import { AnimatedWrapper } from "./animated-wrapper"
+import { AnimatedTitle } from "./animated-title"
 
 const ctaOptions = [
   {
@@ -66,9 +67,13 @@ export function CTASection() {
               </div>
 
               <div className="relative text-center mb-12">
-                <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-6 text-white text-balance">
+                <AnimatedTitle
+                  as="h2"
+                  className="text-4xl md:text-5xl font-bold tracking-tight mb-6 text-white text-balance"
+                  activeColor="#14B8A6"
+                >
                   Ready to Leave Work on Time?
-                </h2>
+                </AnimatedTitle>
                 <p className="text-lg text-white/80 max-w-2xl mx-auto">
                   Join hundreds of SLPs who are reclaiming their evenings, their weekends, and their passion for the
                   work that matters.

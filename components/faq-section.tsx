@@ -2,6 +2,7 @@
 
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import { AnimatedWrapper } from "./animated-wrapper"
+import { AnimatedTitle } from "./animated-title"
 import { HelpCircle, Settings, Scale } from "lucide-react"
 
 const faqs = [
@@ -65,9 +66,9 @@ export function FAQSection() {
     <section id="faq" className="py-24 lg:py-32 bg-white">
       <div className="max-w-4xl mx-auto px-6 lg:px-8">
         <AnimatedWrapper className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-6 text-[#1F2937]">
+          <AnimatedTitle as="h2" className="text-4xl md:text-5xl font-bold tracking-tight mb-6 text-[#1F2937]">
             Frequently Asked Questions
-          </h2>
+          </AnimatedTitle>
           <p className="text-lg text-[#6B7280]">Everything you need to know about EASI</p>
         </AnimatedWrapper>
 

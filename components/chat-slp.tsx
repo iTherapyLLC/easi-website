@@ -1,11 +1,23 @@
 "use client"
 
 import type React from "react"
-import { useState, useRef } from "react"
-import { CheckCircle2, XCircle, Lock, FileText, Brain, Shield, MapPin, Sparkles, ShieldAlert } from "lucide-react"
-import { AnimatedWrapper } from "./animated-wrapper"
-import Image from "next/image"
+import { useState, useRef, useEffect } from "react"
 import { motion } from "framer-motion"
+import {
+  Lock,
+  BookOpen,
+  FileText,
+  Target,
+  ArrowRight,
+  MessageCircle,
+  CheckCircle2,
+  ShieldAlert,
+  XCircle,
+  Shield,
+} from "lucide-react"
+import Image from "next/image"
+import { AnimatedWrapper } from "./animated-wrapper"
+import { AnimatedTitle } from "./animated-title"
 
 const capabilities = [
   {
@@ -15,24 +27,24 @@ const capabilities = [
       "Reviews your evaluation reports for clinical accuracy, appropriate diagnostic language, and functional impact documentation",
   },
   {
-    icon: MapPin,
+    icon: Target,
     title: "State-Specific IEP Criteria",
     description:
       "Provides state-specific IEP eligibility criteria for all 50 states—not generic guidance, but the actual requirements your district needs",
   },
   {
-    icon: Brain,
+    icon: BookOpen,
     title: "SETT Framework Templates",
     description: "Offers SETT framework templates for assistive technology evaluations, complete and copy-paste ready",
   },
   {
-    icon: Sparkles,
+    icon: ArrowRight,
     title: "Light Speed Literacy Guidance",
     description:
       "Guides literacy intervention using the Light Speed Literacy curriculum, with structured session planning that builds systematically",
   },
   {
-    icon: Shield,
+    icon: MessageCircle,
     title: "Defensible Documentation",
     description:
       "Helps you phrase findings in defensible, evidence-based language that protects you and serves the child",
@@ -102,6 +114,10 @@ function MySLP() {
     setLogoMousePosition({ x, y })
   }
 
+  useEffect(() => {
+    // Optional: Add any side effects here
+  }, [])
+
   return (
     <section id="myslp" className="py-24 lg:py-32 bg-[#3F4B5B] text-white relative overflow-hidden">
       <div className="absolute inset-0 opacity-10">
@@ -128,12 +144,16 @@ function MySLP() {
       <div className="max-w-7xl mx-auto px-6 lg:px-8 relative">
         <AnimatedWrapper animation="reveal-up">
           <div className="text-center mb-16">
-            <span className="inline-block text-sm uppercase tracking-widest text-[#14B8A6] mb-4 px-4 py-2 bg-[#14B8A6]/10 rounded-full border border-[#14B8A6]/20">
-              My Second Look Protocol
-            </span>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6">
-              The colleague you wish you had
-            </h2>
+            <div className="flex justify-center mb-6">
+              <span className="text-sm uppercase tracking-widest text-[#14B8A6] px-4 py-2 bg-[#14B8A6]/10 rounded-full border border-[#14B8A6]/20">
+                My Second Look Protocol
+              </span>
+            </div>
+            <AnimatedTitle
+              text="The colleague you wish you had"
+              className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6 text-white"
+              activeColor="#14B8A6"
+            />
             <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed">
               <span className="text-[#14B8A6] font-semibold">mySLP doesn't think for you.</span> It thinks with you.
             </p>
@@ -202,7 +222,11 @@ function MySLP() {
                             : "bg-white border border-[#E5E7EB] text-[#1F2937] hover:bg-[#F5F5F5] hover:border-[#3B82F6]"
                         }`}
                       >
-                        {i === 0 && <CheckCircle2 className="w-5 h-5" />}
+                        {i === 0 && (
+                          <motion.div className="w-5 h-5">
+                            <CheckCircle2 />
+                          </motion.div>
+                        )}
                         {text}
                       </button>
                     ))}
@@ -426,9 +450,7 @@ function MySLP() {
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               {/* Left side - Text content */}
               <div>
-                <span className="inline-block text-sm uppercase tracking-widest text-[#14B8A6] mb-4 px-4 py-2 bg-[#14B8A6]/10 rounded-full border border-[#14B8A6]/20">
-                  Structured Interventions
-                </span>
+                <AnimatedTitle text="Structured Interventions" color="#14B8A6" />
                 <h3 className="text-3xl md:text-4xl font-bold mb-6">Therapy Planning & Structured Interventions</h3>
                 <p className="text-lg text-white/80 mb-6 leading-relaxed">
                   Ask mySLP about literacy intervention and you won't get generic suggestions. You'll get{" "}
@@ -456,7 +478,9 @@ function MySLP() {
                       transition={{ delay: i * 0.1 }}
                       className="flex items-center gap-3 text-white/80"
                     >
-                      <CheckCircle2 className="w-5 h-5 text-[#14B8A6] flex-shrink-0" />
+                      <motion.div className="w-5 h-5 text-[#14B8A6] flex-shrink-0">
+                        <CheckCircle2 />
+                      </motion.div>
                       <span>{item}</span>
                     </motion.li>
                   ))}
@@ -526,7 +550,9 @@ function MySLP() {
                       whileInView={{ opacity: 1, x: 0 }}
                       transition={{ delay: 0.2 }}
                     >
-                      <ShieldAlert className="w-4 h-4 text-red-400" />
+                      <motion.div className="w-4 h-4 text-red-400">
+                        <ShieldAlert />
+                      </motion.div>
                       <span className="text-sm font-medium text-red-300">Important Boundaries</span>
                     </motion.div>
 
@@ -575,7 +601,9 @@ function MySLP() {
                             whileHover={{ rotate: [0, -10, 10, 0] }}
                             transition={{ duration: 0.5 }}
                           >
-                            <XCircle className="w-6 h-6 text-red-400" />
+                            <motion.div className="w-6 h-6 text-red-400">
+                              <XCircle />
+                            </motion.div>
                           </motion.div>
 
                           {/* Text */}
@@ -613,10 +641,11 @@ function MySLP() {
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
               >
-                <Shield className="w-4 h-4 text-[#14B8A6]" />
+                <motion.div className="w-4 h-4 flex-shrink-0 mt-0.5 transition-transform duration-300">
+                  <Shield />
+                </motion.div>
                 <span className="text-sm font-medium text-[#14B8A6]">Purpose-Built for Clinical Use</span>
               </motion.div>
-              <h3 className="text-3xl md:text-4xl font-bold mb-4">Why This Isn't ChatGPT</h3>
               <p className="text-white/70 max-w-2xl mx-auto">
                 Generic AI tools weren't designed for healthcare. mySLP was built from the ground up with clinical
                 knowledge and security you can trust.
@@ -665,17 +694,17 @@ function MySLP() {
                         <td className="p-4 md:p-6 font-medium text-white">{row.feature}</td>
                         <td className="p-4 md:p-6 text-red-300/80 text-sm">
                           <div className="flex items-start gap-2">
-                            <XCircle
-                              className={`w-4 h-4 flex-shrink-0 mt-0.5 transition-transform duration-300 ${hoveredRow === index ? "scale-110" : ""}`}
-                            />
+                            <motion.div className="w-4 h-4 flex-shrink-0 mt-0.5 transition-transform duration-300">
+                              <XCircle />
+                            </motion.div>
                             <span>{row.chatgpt}</span>
                           </div>
                         </td>
                         <td className="p-4 md:p-6 text-[#14B8A6] text-sm">
                           <div className="flex items-start gap-2">
-                            <CheckCircle2
-                              className={`w-4 h-4 flex-shrink-0 mt-0.5 transition-transform duration-300 ${hoveredRow === index ? "scale-110" : ""}`}
-                            />
+                            <motion.div className="w-4 h-4 flex-shrink-0 mt-0.5 transition-transform duration-300">
+                              <CheckCircle2 />
+                            </motion.div>
                             <span>{row.myslp}</span>
                           </div>
                         </td>

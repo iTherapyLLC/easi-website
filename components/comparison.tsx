@@ -4,6 +4,7 @@ import Image from "next/image"
 import { Shield, ShieldAlert, Check, X, AlertTriangle } from "lucide-react"
 import { AnimatedWrapper } from "./animated-wrapper"
 import { motion } from "framer-motion"
+import { AnimatedTitle } from "./animated-title"
 
 const comparisonData = [
   { feature: "HIPAA Compliance", chatgpt: false, easi: true, easiNote: "Full BAA provided" },
@@ -20,11 +21,15 @@ export function Comparison() {
     <section id="comparison" className="py-24 lg:py-32 bg-white">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <AnimatedWrapper className="text-center mb-16">
-          <span className="inline-flex items-center gap-2 text-sm uppercase tracking-widest text-[#EF4444] mb-4">
-            <AlertTriangle className="w-4 h-4" />
-            Critical Distinction
-          </span>
-          <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-6 text-[#1F2937]">Why EASI is NOT ChatGPT</h2>
+          <div className="flex justify-center mb-6">
+            <span className="inline-flex items-center gap-2 text-sm uppercase tracking-widest text-[#EF4444] px-4 py-2 bg-red-50 rounded-full border border-red-200">
+              <AlertTriangle className="w-4 h-4" />
+              Critical Distinction
+            </span>
+          </div>
+          <AnimatedTitle as="h2" className="text-4xl md:text-5xl font-bold tracking-tight mb-6 text-[#1F2937]">
+            Why EASI is NOT ChatGPT
+          </AnimatedTitle>
           <p className="text-lg text-[#6B7280] max-w-3xl mx-auto">
             Uploading patient recordings or documents to ChatGPT violates HIPAA and FERPA regulations. EASI provides a
             legally compliant alternative.
