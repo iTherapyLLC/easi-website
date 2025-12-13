@@ -155,7 +155,7 @@ function MySLP() {
               activeColor="#14B8A6"
             />
             <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed">
-              <span className="text-[#14B8A6] font-semibold">mySLP doesn't think for you.</span> It thinks with you.
+              <span className="text-[#14B8A6] font-semibold">MySLP doesn't think for you.</span> It thinks with you.
             </p>
           </div>
         </AnimatedWrapper>
@@ -163,7 +163,7 @@ function MySLP() {
         <AnimatedWrapper animation="reveal-up">
           <div className="max-w-4xl mx-auto text-center mb-20">
             <p className="text-lg text-white/70 leading-relaxed">
-              When you bring your evaluation data, your therapy plans, your diagnostic questions—mySLP offers what every
+              When you bring your evaluation data, your therapy plans, your diagnostic questions—MySLP offers what every
               clinician needs but rarely gets:
               <span className="text-white font-medium">
                 {" "}
@@ -189,7 +189,7 @@ function MySLP() {
                       <Image src="/easi-logo.png" alt="EASI Logo" width={32} height={32} className="object-contain" />
                     </div>
                     <div>
-                      <div className="font-semibold">mySLP</div>
+                      <div className="font-semibold">MySLP</div>
                       <div className="text-sm text-white/70">My Second Look Protocol</div>
                     </div>
                   </div>
@@ -453,7 +453,7 @@ function MySLP() {
                 <AnimatedTitle text="Structured Interventions" color="#14B8A6" />
                 <h3 className="text-3xl md:text-4xl font-bold mb-6">Therapy Planning & Structured Interventions</h3>
                 <p className="text-lg text-white/80 mb-6 leading-relaxed">
-                  Ask mySLP about literacy intervention and you won't get generic suggestions. You'll get{" "}
+                  Ask MySLP about literacy intervention and you won't get generic suggestions. You'll get{" "}
                   <span className="text-[#14B8A6] font-semibold">Light Speed Literacy</span>—thirteen progressive phases
                   of Orton-Gillingham-based structured literacy, session by session, ready to implement.
                 </p>
@@ -500,7 +500,7 @@ function MySLP() {
                 >
                   <Image
                     src="/images/screenshot-202025-12-05-20at-209.png"
-                    alt="mySLP literacy intervention conversation showing Light Speed Literacy curriculum guidance"
+                    alt="MySLP literacy intervention conversation showing Light Speed Literacy curriculum guidance"
                     width={600}
                     height={400}
                     className="w-full h-auto"
@@ -557,11 +557,11 @@ function MySLP() {
                     </motion.div>
 
                     <h3 className="text-3xl md:text-4xl font-bold mb-4 text-white">
-                      What mySLP <span className="text-red-400">Won't</span> Do
+                      What MySLP <span className="text-red-400">Won't</span> Do
                     </h3>
 
                     <p className="text-lg text-white/70 mb-8 leading-relaxed">
-                      mySLP is designed to support and enhance your clinical judgment—never to replace it. These
+                      MySLP is designed to support and enhance your clinical judgment—never to replace it. These
                       boundaries exist to protect you and the children you serve.
                     </p>
 
@@ -647,7 +647,7 @@ function MySLP() {
                 <span className="text-sm font-medium text-[#14B8A6]">Purpose-Built for Clinical Use</span>
               </motion.div>
               <p className="text-white/70 max-w-2xl mx-auto">
-                Generic AI tools weren't designed for healthcare. mySLP was built from the ground up with clinical
+                Generic AI tools weren't designed for healthcare. MySLP was built from the ground up with clinical
                 knowledge and security you can trust.
               </p>
             </div>
@@ -673,7 +673,7 @@ function MySLP() {
                       <th className="text-left p-4 md:p-6 font-semibold text-sm uppercase tracking-wider">
                         <div className="flex items-center gap-2">
                           <div className="w-3 h-3 rounded-full bg-[#14B8A6]" />
-                          <span className="text-[#14B8A6]">mySLP</span>
+                          <span className="text-[#14B8A6]">MySLP</span>
                         </div>
                       </th>
                     </tr>
@@ -721,7 +721,7 @@ function MySLP() {
           <div className="text-center max-w-3xl mx-auto">
             <h3 className="text-3xl md:text-4xl font-bold mb-6">The Bottom Line</h3>
             <p className="text-xl text-white/80 mb-6 leading-relaxed">
-              You already do excellent clinical work. mySLP helps you{" "}
+              You already do excellent clinical work. MySLP helps you{" "}
               <span className="text-[#14B8A6] font-semibold">document it</span>,
               <span className="text-[#14B8A6] font-semibold">defend it</span>, and{" "}
               <span className="text-[#14B8A6] font-semibold">deliver it faster</span>.
@@ -730,7 +730,7 @@ function MySLP() {
               <p className="text-lg md:text-xl font-medium text-white mb-2">
                 Your judgment. Your license. Your decisions.
               </p>
-              <p className="text-white/70">mySLP just makes sure you've seen everything before you sign your name.</p>
+              <p className="text-white/70">MySLP just makes sure you've seen everything before you sign your name.</p>
             </div>
           </div>
         </AnimatedWrapper>
