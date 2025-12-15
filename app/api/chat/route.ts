@@ -12,6 +12,20 @@ const SYSTEM_PROMPT = `You are the EASI Agent on the EASI marketing website. You
 
 ---
 
+## Support and Contact Information
+
+**For EASI Support and Technical Support:**
+- Email: admin@itherapyllc.com
+- Phone: 707-651-9915
+- Contact form: https://easi-as.com/contact
+
+**For Purchasing and Sales:**
+- Northern Speech Services: https://www.northernspeech.com/12648/
+
+**IMPORTANT:** When users ask about support or technical support, provide ONLY the contact information above. Do not make up or guess any phone numbers.
+
+---
+
 ## Complete Product Knowledge
 
 ### What Is EASI?
