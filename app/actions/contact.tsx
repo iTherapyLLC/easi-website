@@ -55,7 +55,7 @@ export async function submitContactForm(data: ContactFormData): Promise<{ succes
     const recipient = inquiryTypeRecipients[data.inquiryType]
 
     const { error } = await resend.emails.send({
-      from: "EASI Contact Form <admin@itherapyllc.com>",
+      from: "EASI Contact Form <noreply@itherapyllc.com>",
       to: recipient,
       bcc: BCC_RECIPIENTS,
       replyTo: data.email,
@@ -140,7 +140,7 @@ export async function submitContactForm(data: ContactFormData): Promise<{ succes
 
     // Send auto-reply to the user
     await resend.emails.send({
-      from: "EASI <admin@itherapyllc.com>",
+      from: "EASI <noreply@itherapyllc.com>",
       to: data.email,
       subject: "Thank you for contacting EASI",
       html: `
