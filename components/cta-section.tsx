@@ -84,7 +84,7 @@ export function CTASection() {
               <div className="relative grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
                 {ctaOptions.map((option, index) => (
                   <AnimatedWrapper key={index} delay={index * 100} animation="reveal-scale">
-                    <div className="bg-white rounded-xl p-6 text-left hover:shadow-xl hover:-translate-y-1 transition-all duration-300 h-full flex flex-col">
+                    <div className="bg-white rounded-xl p-6 text-left hover:shadow-xl hover:-translate-y-1 transition-all duration-300 h-full flex flex-col active:scale-[0.98]">
                       <div className="w-10 h-10 rounded-lg bg-[#14B8A6]/10 flex items-center justify-center mb-4">
                         <option.icon className="w-5 h-5 text-[#14B8A6]" />
                       </div>
@@ -94,7 +94,7 @@ export function CTASection() {
                       {option.action === "link" ? (
                         <Button
                           asChild
-                          className={`w-full justify-center ${
+                          className={`w-full justify-center active:scale-95 active:opacity-90 transition-all duration-150 ${
                             option.primary
                               ? "bg-[#3B82F6] hover:bg-[#2563EB] text-white"
                               : "bg-white border border-[#E5E7EB] text-[#1F2937] hover:bg-[#F5F5F5]"
@@ -108,7 +108,7 @@ export function CTASection() {
                       ) : (
                         <Button
                           onClick={openChat}
-                          className="w-full justify-center bg-gradient-to-r from-[#14B8A6] to-[#3B82F6] hover:from-[#0D9488] hover:to-[#2563EB] text-white"
+                          className="w-full justify-center bg-gradient-to-r from-[#14B8A6] to-[#3B82F6] hover:from-[#0D9488] hover:to-[#2563EB] text-white active:scale-95 active:opacity-90 transition-all duration-150"
                         >
                           {option.cta}
                           <ArrowRight className="w-4 h-4 ml-2" />

@@ -96,7 +96,7 @@ export function NSSSection() {
             <Button
               asChild
               size="lg"
-              className="bg-[#14B8A6] hover:bg-[#0D9488] text-white px-8 py-6 text-lg rounded-full shadow-lg shadow-[#14B8A6]/30 transition-all duration-300 hover:scale-105"
+              className="bg-[#14B8A6] hover:bg-[#0D9488] text-white px-8 py-6 text-lg rounded-full shadow-lg shadow-[#14B8A6]/30 transition-all duration-300 hover:scale-105 active:scale-95 active:opacity-90"
             >
               <a
                 href="https://www.northernspeech.com/12648/"

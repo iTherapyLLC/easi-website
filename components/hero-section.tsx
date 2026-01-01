@@ -137,7 +137,7 @@ export function HeroSection() {
               <Button
                 asChild
                 size="lg"
-                className="bg-[#3B82F6] text-white hover:bg-[#2563EB] rounded-lg px-8 h-14 text-base font-medium group shadow-lg shadow-[#3B82F6]/25 hover:shadow-xl hover:shadow-[#3B82F6]/30 transition-all duration-300"
+                className="bg-[#3B82F6] text-white hover:bg-[#2563EB] rounded-lg px-8 h-14 text-base font-medium group shadow-lg shadow-[#3B82F6]/25 hover:shadow-xl hover:shadow-[#3B82F6]/30 transition-all duration-300 active:scale-95 active:opacity-90"
               >
                 <a href="https://www.northernspeech.com/12648/" target="_blank" rel="noopener noreferrer">
                   Start saving time today!
@@ -148,7 +148,7 @@ export function HeroSection() {
                 asChild
                 size="lg"
                 variant="outline"
-                className="rounded-lg px-8 h-14 text-base border-[#E5E7EB] hover:bg-[#F5F5F5] bg-white group"
+                className="rounded-lg px-8 h-14 text-base border-[#E5E7EB] hover:bg-[#F5F5F5] bg-white group active:scale-95 active:opacity-90 transition-all duration-150"
               >
                 <a href="#how-it-works">
                   <Play className="mr-2 w-4 h-4 group-hover:scale-110 transition-transform" />

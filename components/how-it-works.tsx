@@ -218,7 +218,7 @@ export function HowItWorks() {
             {capabilities.map((capability, index) => (
               <div
                 key={index}
-                className="group bg-white rounded-2xl p-6 border border-[#E5E7EB] shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+                className="group bg-white rounded-2xl p-6 border border-[#E5E7EB] shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 active:scale-[0.98]"
               >
                 <div
                   className="w-14 h-14 rounded-xl flex items-center justify-center mb-4 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3"

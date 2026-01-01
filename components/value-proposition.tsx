@@ -51,7 +51,7 @@ export function ValueProposition() {
         <div className="grid md:grid-cols-3 gap-8">
           {benefits.map((benefit, index) => (
             <AnimatedWrapper key={benefit.category} delay={index * 150} className="group">
-              <div className="bg-[#F5F5F5] border border-[#E5E7EB] rounded-2xl overflow-hidden h-full hover:shadow-xl hover:-translate-y-2 transition-all duration-500 hover:border-[#8B5CF6]/30">
+              <div className="bg-[#F5F5F5] border border-[#E5E7EB] rounded-2xl overflow-hidden h-full hover:shadow-xl hover:-translate-y-2 transition-all duration-500 hover:border-[#8B5CF6]/30 active:scale-[0.98]">
                 <div className="relative aspect-[3/2] overflow-hidden">
                   <Image
                     src={benefit.image || "/placeholder.svg"}
