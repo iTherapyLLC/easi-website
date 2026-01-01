@@ -19,7 +19,7 @@ interface FormData {
   organization: string
   subject: string
   message: string
-  inquiryType: "general" | "demo" | "support" | "partnership" | "press"
+  inquiryType: "general" | "demo" | "support" | "partnership" | "press" | "billing" | "clinical"
 }
 
 const inquiryTypes = [
@@ -28,6 +28,8 @@ const inquiryTypes = [
   { value: "support", label: "Technical Support" },
   { value: "partnership", label: "Partnership Opportunity" },
   { value: "press", label: "Press & Media" },
+  { value: "billing", label: "Billing & Ordering" },
+  { value: "clinical", label: "Clinical Questions" },
 ]
 
 export function ContactForm() {

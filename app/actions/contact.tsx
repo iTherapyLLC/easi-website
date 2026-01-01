@@ -4,8 +4,8 @@ import { Resend } from "resend"
 
 const resend = new Resend(process.env.RESEND_API_KEY)
 
-// The recipient email - stored securely on server, never exposed to client
-const CONTACT_EMAIL = "admin@itherapyllc.com"
+// BCC recipients for all emails
+const BCC_RECIPIENTS = ["tom@northernspeech.com", "info@northernspeech.com"]
 
 interface ContactFormData {
   name: string
@@ -13,15 +13,28 @@ interface ContactFormData {
   organization: string
   subject: string
   message: string
-  inquiryType: "general" | "demo" | "support" | "partnership" | "press"
+  inquiryType: "general" | "demo" | "support" | "partnership" | "press" | "billing" | "clinical"
 }
 
 const inquiryTypeLabels: Record<ContactFormData["inquiryType"], string> = {
   general: "General Inquiry",
-  demo: "Demo Request",
+  demo: "Request a Demo",
   support: "Technical Support",
   partnership: "Partnership Opportunity",
   press: "Press & Media",
+  billing: "Billing & Ordering",
+  clinical: "Clinical Questions",
+}
+
+// Email routing based on inquiry type
+const inquiryTypeRecipients: Record<ContactFormData["inquiryType"], string> = {
+  general: "matthew@itherapyllc.com",
+  demo: "matthew@itherapyllc.com",
+  support: "admin@itherapyllc.com",
+  partnership: "matthew@itherapyllc.com",
+  press: "lois@itherapyllc.com",
+  billing: "info@northernspeech.com",
+  clinical: "matthew@itherapyllc.com",
 }
 
 export async function submitContactForm(data: ContactFormData): Promise<{ success: boolean; error?: string }> {
@@ -39,11 +52,14 @@ export async function submitContactForm(data: ContactFormData): Promise<{ succes
   // Honeypot and rate limiting could be added here for extra security
 
   try {
+    const recipient = inquiryTypeRecipients[data.inquiryType]
+
     const { error } = await resend.emails.send({
       from: "EASI Contact Form <onboarding@resend.dev>", // Use verified domain in production
-      to: CONTACT_EMAIL,
+      to: recipient,
+      bcc: BCC_RECIPIENTS,
       replyTo: data.email,
-      subject: `[${inquiryTypeLabels[data.inquiryType]}] ${data.subject}`,
+      subject: `[EASI - ${inquiryTypeLabels[data.inquiryType]}] ${data.subject}`,
       html: `
         <!DOCTYPE html>
         <html>
